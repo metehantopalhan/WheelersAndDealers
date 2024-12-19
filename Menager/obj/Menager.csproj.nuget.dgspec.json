@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj": {}
+    "C:\\Users\\Nasrettin\\Source\\Repos\\WheelersAndDealers\\Menager\\Menager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj": {
+    "C:\\Users\\Nasrettin\\Source\\Repos\\WheelersAndDealers\\Menager\\Menager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj",
+        "projectUniqueName": "C:\\Users\\Nasrettin\\Source\\Repos\\WheelersAndDealers\\Menager\\Menager.csproj",
         "projectName": "Menager",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj",
-        "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\obj\\",
+        "projectPath": "C:\\Users\\Nasrettin\\Source\\Repos\\WheelersAndDealers\\Menager\\Menager.csproj",
+        "packagesPath": "C:\\Users\\Nasrettin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nasrettin\\Source\\Repos\\WheelersAndDealers\\Menager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nasrettin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
