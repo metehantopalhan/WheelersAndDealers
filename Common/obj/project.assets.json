@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gorke\\.nuget\\packages\\": {}
+    "C:\\Users\\Emir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\Emir\\Source\\Repos\\WheelersAndDealers\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\obj\\",
+      "projectPath": "C:\\Users\\Emir\\Source\\Repos\\WheelersAndDealers\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Emir\\Source\\Repos\\WheelersAndDealers\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.nuget.org/api/v2/": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://www.nuget.org/api/v2/curated-feeds/miscrosoftdotnet/": {}
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
