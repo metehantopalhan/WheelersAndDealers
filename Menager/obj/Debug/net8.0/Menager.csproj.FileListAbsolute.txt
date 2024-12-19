@@ -1,0 +1,23 @@
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.AssemblyInfoInputs.cache
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.AssemblyInfo.cs
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.csproj.CoreCompileInputs.cache
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\bin\Debug\net8.0\Menager.deps.json
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\bin\Debug\net8.0\Menager.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\bin\Debug\net8.0\Menager.pdb
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\refint\Menager.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\Menager.pdb
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Menager\obj\Debug\net8.0\ref\Menager.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Menager.deps.json
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Menager.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Menager.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.AssemblyInfoInputs.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.AssemblyInfo.cs
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.csproj.CoreCompileInputs.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.sourcelink.json
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\refint\Menager.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\ref\Menager.dll

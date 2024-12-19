@@ -1,0 +1,31 @@
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\bin\Debug\net8.0\Common.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\bin\Debug\net8.0\Common.pdb
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.csproj.Up2Date
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\gorke\OneDrive\Masaüstü\Jax Teller\Bilgisayar Proje\SpareParts\SpareParts\SpareParts\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\bin\Debug\net8.0\Common.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\bin\Debug\net8.0\Common.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.csproj.Up2Date
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Domain\obj\Debug\net8.0\ref\Domain.dll
