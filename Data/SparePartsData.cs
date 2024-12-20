@@ -35,7 +35,7 @@ namespace Data
 
             if (searchText != null)
             {
-                predicate.And(x => x.SearchText == searchText);
+                predicate.And(x => x.SearchText.Contains(searchText.ToUpper()));
             }
             if (isActive != null)
             {
@@ -56,7 +56,7 @@ namespace Data
 
         public async Task<PurchaseOrder> getPurchaseOrderById(Guid id)
         {
-            return await _dbContext.PurchaseOrders.Include(x=>x.PurchaseOrderDetail).FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.PurchaseOrders.Include(x => x.PurchaseOrderDetail).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Guid?> GetAdminByMailAndPassword(string email, string password)

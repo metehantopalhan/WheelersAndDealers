@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\sparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\sparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\menager\\sparepartsmenager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|solutionrelative:menager\\sparepartsmenager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\isparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\isparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\sparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\sparepartsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\datadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,6 +121,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{75A5880A-5D75-4DD4-A7FB-71CF0D8D3E02}|InternshipManagement\\SpareParts.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\internshipmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{75A5880A-5D75-4DD4-A7FB-71CF0D8D3E02}|InternshipManagement\\SpareParts.csproj|solutionrelative:internshipmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\migrations\\20241220214900_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\migrations\\20241220214900_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UploadImageRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
@@ -146,12 +150,11 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:40:39.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:40:39.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UpdateUserRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
@@ -159,12 +162,11 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:38:31.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:38:31.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UpdateSupplierItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
@@ -172,25 +174,24 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:35:22.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:35:22.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SparePartsMenager.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\SparePartsMenager.cs",
               "RelativeDocumentMoniker": "Menager\\SparePartsMenager.cs",
               "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\SparePartsMenager.cs",
               "RelativeToolTip": "Menager\\SparePartsMenager.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAA8wLcAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAiwLcAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:35:14.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Item.cs",
               "RelativeDocumentMoniker": "Domain\\Item.cs",
@@ -198,12 +199,36 @@
               "RelativeToolTip": "Domain\\Item.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:40:00.499Z",
+              "WhenOpened": "2024-12-20T19:40:00.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SparePartsData.cs",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
+              "RelativeDocumentMoniker": "Data\\SparePartsData.cs",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
+              "RelativeToolTip": "Data\\SparePartsData.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwCUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T19:38:11.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 30,
+              "Title": "20241220214900_initialmigration.cs",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\Migrations\\20241220214900_initialmigration.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20241220214900_initialmigration.cs",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\Migrations\\20241220214900_initialmigration.cs",
+              "RelativeToolTip": "Data\\Migrations\\20241220214900_initialmigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T21:49:00.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ISpareParts.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
               "RelativeDocumentMoniker": "Menager\\ISpareParts.cs",
@@ -211,12 +236,11 @@
               "RelativeToolTip": "Menager\\ISpareParts.cs",
               "ViewState": "AgIAABAAAAAAAAAAAADwvxwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T19:04:26.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T19:04:26.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UpdateSuppplierRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
@@ -224,12 +248,11 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:18:37.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:18:37.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Supplier.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Supplier.cs",
               "RelativeDocumentMoniker": "Domain\\Supplier.cs",
@@ -237,12 +260,11 @@
               "RelativeToolTip": "Domain\\Supplier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:15:48.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:15:48.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\User.cs",
               "RelativeDocumentMoniker": "Domain\\User.cs",
@@ -250,12 +272,11 @@
               "RelativeToolTip": "Domain\\User.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:21:38.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:21:38.854Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CreateSupplierRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
@@ -263,12 +284,11 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:08:48.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:08:48.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SupplierItem.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\SupplierItem.cs",
               "RelativeDocumentMoniker": "Domain\\SupplierItem.cs",
@@ -276,12 +296,11 @@
               "RelativeToolTip": "Domain\\SupplierItem.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA7wBwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:19:19.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:19:19.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PurchaseOrderDetail.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\PurchaseOrderDetail.cs",
               "RelativeDocumentMoniker": "Domain\\PurchaseOrderDetail.cs",
@@ -289,12 +308,11 @@
               "RelativeToolTip": "Domain\\PurchaseOrderDetail.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAvwC0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:59:29.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:59:29.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UpdatePurchaseOrderDetailRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
@@ -302,8 +320,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:21:52.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:21:52.667Z"
             },
             {
               "$type": "Document",
@@ -315,8 +332,7 @@
               "RelativeToolTip": "Data\\DataDb.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:18:30.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:18:30.774Z"
             },
             {
               "$type": "Document",
@@ -328,25 +344,11 @@
               "RelativeToolTip": "Data\\SqlDbContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA+wB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:18:46.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:18:46.844Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "SparePartsData.cs",
-              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
-              "RelativeDocumentMoniker": "Data\\SparePartsData.cs",
-              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
-              "RelativeToolTip": "Data\\SparePartsData.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAmwDoAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:38:11.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "ISparePartsData.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\ISparePartsData.cs",
               "RelativeDocumentMoniker": "Data\\ISparePartsData.cs",
@@ -354,8 +356,7 @@
               "RelativeToolTip": "Data\\ISparePartsData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:24:33.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:24:33.658Z"
             },
             {
               "$type": "Document",
@@ -367,8 +368,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateNotificationRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:15:56.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:15:56.094Z"
             },
             {
               "$type": "Document",
@@ -380,8 +380,7 @@
               "RelativeToolTip": "Domain\\Notification.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:49:30.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:49:30.038Z"
             },
             {
               "$type": "Document",
@@ -393,8 +392,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreateSupplierItemRelationRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:11:31.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:11:31.599Z"
             },
             {
               "$type": "Document",
@@ -406,8 +404,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreateSupplierItemRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:17:45.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:17:45.294Z"
             },
             {
               "$type": "Document",
@@ -419,8 +416,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateItemRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:01:09.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:01:09.236Z"
             },
             {
               "$type": "Document",
@@ -432,8 +428,7 @@
               "RelativeToolTip": "Menager\\AutoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:27:04.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:27:04.921Z"
             },
             {
               "$type": "Document",
@@ -445,8 +440,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreatePurchaseOrderRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:56:21.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:56:21.532Z"
             },
             {
               "$type": "Document",
@@ -458,8 +452,7 @@
               "RelativeToolTip": "Common\\CargoStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T20:01:25.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T20:01:25.292Z"
             },
             {
               "$type": "Document",
@@ -471,8 +464,7 @@
               "RelativeToolTip": "Common\\UserType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:47:59.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:47:59.819Z"
             },
             {
               "$type": "Document",
@@ -484,8 +476,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreateNotificationRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:44:21.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:44:21.761Z"
             },
             {
               "$type": "Document",
@@ -497,8 +488,7 @@
               "RelativeToolTip": "Menager\\Dtos\\RequestDto\\CreateItemRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:38:34.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T19:38:34.42Z"
             },
             {
               "$type": "Document",
@@ -510,8 +500,7 @@
               "RelativeToolTip": "InternshipManagement\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:59:13.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T18:59:13.576Z"
             },
             {
               "$type": "Document",
