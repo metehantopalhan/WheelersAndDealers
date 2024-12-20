@@ -181,7 +181,7 @@ namespace Menager
 
         public async Task UpdateSupplierItemRequestDto(UpdateSupplierItemRequestDto requestDto)
         {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId;
+            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
                 throw new Exception("You are not allowed to do this action");

@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|solutionrelative:menager\\sparepartsmenager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\menager\\ispareparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|solutionrelative:menager\\ispareparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49C6D607-5183-4B24-AC16-CD103722B791}|Domain\\Domain.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\domain\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C6D607-5183-4B24-AC16-CD103722B791}|Domain\\Domain.csproj|solutionrelative:domain\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{49C6D607-5183-4B24-AC16-CD103722B791}|Domain\\Domain.csproj|solutionrelative:domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\menager\\ispareparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|solutionrelative:menager\\ispareparts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\menager\\dtos\\requestdto\\createsupplieritemrelationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1EC8966-6709-4F35-B163-68BFA0E3D8C8}|Menager\\Menager.csproj|solutionrelative:menager\\dtos\\requestdto\\createsupplieritemrelationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -130,11 +130,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UploadImageRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
@@ -147,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UpdateUserRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
@@ -160,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UpdateSupplierItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
@@ -177,33 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateSuppplierRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
-              "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
-              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
-              "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:18:37.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SparePartsMenager.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\SparePartsMenager.cs",
               "RelativeDocumentMoniker": "Menager\\SparePartsMenager.cs",
               "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\SparePartsMenager.cs",
               "RelativeToolTip": "Menager\\SparePartsMenager.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAiwNsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAA8wLcAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T19:35:14.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Item.cs",
               "RelativeDocumentMoniker": "Domain\\Item.cs",
@@ -216,7 +203,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "ISpareParts.cs",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
+              "RelativeDocumentMoniker": "Menager\\ISpareParts.cs",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
+              "RelativeToolTip": "Menager\\ISpareParts.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvxwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T19:04:26.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateSuppplierRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
+              "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
+              "RelativeToolTip": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T21:18:37.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Supplier.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Supplier.cs",
               "RelativeDocumentMoniker": "Domain\\Supplier.cs",
@@ -229,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\User.cs",
               "RelativeDocumentMoniker": "Domain\\User.cs",
@@ -242,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CreateSupplierRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
@@ -255,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SupplierItem.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\SupplierItem.cs",
               "RelativeDocumentMoniker": "Domain\\SupplierItem.cs",
@@ -268,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PurchaseOrderDetail.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\PurchaseOrderDetail.cs",
               "RelativeDocumentMoniker": "Domain\\PurchaseOrderDetail.cs",
@@ -281,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UpdatePurchaseOrderDetailRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
@@ -294,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "DataDb.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\DataDb.cs",
               "RelativeDocumentMoniker": "Data\\DataDb.cs",
@@ -307,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SqlDbContext.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SqlDbContext.cs",
               "RelativeDocumentMoniker": "Data\\SqlDbContext.cs",
@@ -320,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "SparePartsData.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
               "RelativeDocumentMoniker": "Data\\SparePartsData.cs",
@@ -333,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ISparePartsData.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\ISparePartsData.cs",
               "RelativeDocumentMoniker": "Data\\ISparePartsData.cs",
@@ -346,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UpdateNotificationRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateNotificationRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateNotificationRequestDto.cs",
@@ -359,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Notification.cs",
               "RelativeDocumentMoniker": "Domain\\Notification.cs",
@@ -381,19 +394,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T21:11:31.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ISpareParts.cs",
-              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
-              "RelativeDocumentMoniker": "Menager\\ISpareParts.cs",
-              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
-              "RelativeToolTip": "Menager\\ISpareParts.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T19:04:26.647Z",
               "EditorCaption": ""
             },
             {
