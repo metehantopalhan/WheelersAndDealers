@@ -35,7 +35,7 @@ namespace Data.Migrations
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     ItemTypeId = table.Column<int>(type: "int", nullable: false),
                     ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StockCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GuaranteeTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Data = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
@@ -51,9 +51,9 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ResponsiblePersonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DestinationPersonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SourcePersonId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RelatedUserTypeId = table.Column<int>(type: "int", nullable: false),
                     HasRead = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -68,7 +68,11 @@ namespace Data.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SupplierName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SupplierDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SupplierLocation = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -88,28 +92,6 @@ namespace Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SupplierContactInformations",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SupplierId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SupplierLocation = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SupplierContactInformations", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SupplierContactInformations_Suppliers_SupplierId",
-                        column: x => x.SupplierId,
-                        principalTable: "Suppliers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -213,12 +195,6 @@ namespace Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SupplierContactInformations_SupplierId",
-                table: "SupplierContactInformations",
-                column: "SupplierId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_SupplierItems_ItemId",
                 table: "SupplierItems",
                 column: "ItemId");
@@ -240,9 +216,6 @@ namespace Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "PurchaseOrderDetail");
-
-            migrationBuilder.DropTable(
-                name: "SupplierContactInformations");
 
             migrationBuilder.DropTable(
                 name: "PurchaseOrders");

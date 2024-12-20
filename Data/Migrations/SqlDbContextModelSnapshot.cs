@@ -79,11 +79,11 @@ namespace Data.Migrations
                     b.Property<int>("ItemTypeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SearchText")
+                    b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StockCode")
+                    b.Property<string>("SearchText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -102,13 +102,13 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("DestinationPersonId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("HasRead")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RelatedUserTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("ResponsiblePersonId")
+                    b.Property<Guid>("SourcePersonId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -202,10 +202,26 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SupplierDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SupplierLocation")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -216,39 +232,6 @@ namespace Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Suppliers");
-                });
-
-            modelBuilder.Entity("Domain.SupplierContactInformation", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("SupplierId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("SupplierLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SupplierId")
-                        .IsUnique();
-
-                    b.ToTable("SupplierContactInformations");
                 });
 
             modelBuilder.Entity("Domain.SupplierItem", b =>
@@ -343,15 +326,6 @@ namespace Data.Migrations
                     b.Navigation("SupplierItem");
                 });
 
-            modelBuilder.Entity("Domain.SupplierContactInformation", b =>
-                {
-                    b.HasOne("Domain.Supplier", null)
-                        .WithOne("SupplierContactInformation")
-                        .HasForeignKey("Domain.SupplierContactInformation", "SupplierId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Domain.SupplierItem", b =>
                 {
                     b.HasOne("Domain.Item", "Item")
@@ -369,12 +343,6 @@ namespace Data.Migrations
                     b.Navigation("Item");
 
                     b.Navigation("Supplier");
-                });
-
-            modelBuilder.Entity("Domain.Supplier", b =>
-                {
-                    b.Navigation("SupplierContactInformation")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
