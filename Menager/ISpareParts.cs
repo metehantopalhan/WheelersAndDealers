@@ -5,10 +5,10 @@ namespace Menager
 {
     public interface ISpareParts
     {
-        Task<Guid> Login(string mail, string password);
+        Task<Guid?> LoginForAdmin(string mail, string password);
         Task CreateItem(CreateItemRequestDto requestDto);
         Task UpdateItem(UpdateItemRequestDto requestDto);
-        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int? skip, int? take);
+        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take);
         Task<GetItemByIdResponseDto> GetItemById(Guid id);
         Task UploadImage(UploadImageRequestDto requestDto);
         Task CreateNotification(CreateNotificationRequestDto requestDto);
@@ -21,9 +21,11 @@ namespace Menager
         Task UpdateSupplier(UpdateSuppplierRequestDto requestDto);
         Task CreateUser(CreateUserRequestDto requestDto);
         Task UpdateUser(UpdateUserRequestDto requestDto);
-        Task CreateSupplierItem(CreateSupplierItemRequestDto requestDto);
         Task UpdateSupplierItemRequestDto(UpdateSupplierItemRequestDto requestDto);
-        Task<GetUserByMailPasswordResponseDto> GetUserByMailPasswarord(GetUserRequestdto requestdto);
         Task<GetUserByParametersResponseDto> GetUsers();
+        Task<Guid?> LoginForUser(string mail, string password);
+        Task<Guid?> LoginForSupplier(string mail, string password);
+        Task CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto);
+        Task DeleteImage(Guid id);
     }
 }

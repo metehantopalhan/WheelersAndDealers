@@ -9,14 +9,12 @@ namespace Data
         public Task<Item> getItemById(Guid id);
         public Task<Admin> getAdminById(Guid id);
         public Task<Supplier> getSupplierById(Guid id);
-        public Task<SupplierContactInformation> getSupplierContactInformationById(Guid id);
         public Task<SupplierItem> getSupplierItemById(Guid id);
         public Task<List<User>> getUsers();
         public Task<List<PurchaseOrder>> getPurchaseOrders();
         public Task<List<Item>> getItems();
         public Task<List<Admin>> getAdmins();
         public Task<List<Supplier>> getSuppliers();
-        public Task<List<SupplierContactInformation>> getSupplierConcactInformations();
         public Task<List<SupplierItem>> getSupplierContactInformations();
         public Task PersistAsync();
         Task<List<Notification>> getNotifications();
@@ -28,5 +26,10 @@ namespace Data
         Task CreatePurchaseOrder(PurchaseOrder purchaseOrder);
         Task UploadImageForItem(Guid id, string imageName, byte[] data);
         Task DeleteImageForItem(Guid id);
+        Task CreateUser(User user);
+        Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take);
+        Task<Guid?> GetAdminByMailAndPassword(string email, string password);
+        Task<Guid?> GetUserByMailAndPassword(string email, string password);
+        Task<Guid?> GetSupplierByMailAndPassword(string email, string password);
     }
 }

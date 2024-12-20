@@ -15,6 +15,24 @@
         public double Price { get; private set; }
         public string SupplierName { get; private set; }
         public string ItemName { get; private set; }
-        
+        internal SupplierItem(Guid itemId, Guid supplierId, double price, string supplierName, string itemName)
+        {
+            Id = Guid.NewGuid();
+            ItemId = itemId;
+            SupplierId = supplierId;
+            Price = price;
+            SupplierName = supplierName;
+            ItemName = itemName;
+            IsActive = true;
+        }
+
+        public void UpdateSupplierItem(bool isActive, double price, string supplierName, string itemName)
+        {
+            IsActive = isActive;
+            Price= price;
+            SupplierName = supplierName;
+            ItemName = itemName;
+        }
+
     }
 }

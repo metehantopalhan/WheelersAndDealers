@@ -16,7 +16,6 @@ namespace Data.DbContextLib
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<SupplierContactInformation> SupplierContactInformations { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierItem> SupplierItems { get; set; }
         public DbSet<Notification> Notifications { get; set; }
