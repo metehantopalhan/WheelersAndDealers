@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "p2oRJYA+eos=",
+=======
+  "dgSpecHash": "5AUwjEpj9yU=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj",
   "expectedPackageFiles": [

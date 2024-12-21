@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "wAwwcpjJ56I=",
+=======
+  "dgSpecHash": "e8KdpJ8FMlc=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
