@@ -25,7 +25,7 @@ namespace Menager
                 throw new Exception("You are not allowed to do this action");
             }
 
-            Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemType, requestDto.ProductCode, requestDto.GuaranteeTime);
+            Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemTypeId, requestDto.CarBrandId, requestDto.ProductCode, requestDto.GuaranteeTime);
             await _sparePartsData.CreateItem(item);
             await _sparePartsData.PersistAsync();
         }
@@ -44,8 +44,10 @@ namespace Menager
             {
                 throw new Exception("You are not allowed to do this action");
             }
+
             PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
-            requestDto.PurchaseOrderDetailList.ForEach(x => purchaseOrder.AddPurchaseOrderDetail(x.SupplierItemId, x.Quantity, x.PurchaseOrderDetailPrice));
+            user.AddPurchaseOrder(purchaseOrder);
+            requestDto.PurchaseOrderDetailList.ForEach(x => purchaseOrder.AddPurchaseOrderDetail(x.SupplierItemId, x.ItemId, x.Quantity, x.PurchaseOrderDetailPrice));
             await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
         }
 
@@ -133,6 +135,8 @@ namespace Menager
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
             item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
+            await _sparePartsData.PersistAsync();
+
 
         }
 

@@ -3,6 +3,7 @@
     public class CreatePurchaseOrderDetailsRequestDto
     {
         public int Quantity { get; set; }
+        public Guid ItemId { get; set; }
         public double PurchaseOrderDetailPrice { get; set; }
         public Guid SupplierItemId { get; set; }
 

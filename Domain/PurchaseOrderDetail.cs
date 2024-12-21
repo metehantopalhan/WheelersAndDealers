@@ -9,6 +9,7 @@ namespace Domain
 
         }
         public Guid Id { get; private set; }
+        public Guid ItemId { get; private set; }
         public Guid PurchaseOrderId { get; private set; }
         public PurchaseOrder PurchaseOrder { get; private set; }
         public Guid SupplierItemId { get; private set; }
@@ -29,9 +30,10 @@ namespace Domain
             get { return (int)this.PurchaseOrderDetailStatusId; }
             set { PurchaseOrderDetailStatus = (PurchaseOrderDetailStatus)value; }
         }
-        internal PurchaseOrderDetail(Guid purchaseOrderId, Guid supplierItemId, int quantity, double purchaseOrderDetailPrice)
+        internal PurchaseOrderDetail(Guid purchaseOrderId,Guid itemId, Guid supplierItemId, int quantity, double purchaseOrderDetailPrice)
         {
             Id = Guid.NewGuid();
+            ItemId=itemId;
             SupplierItemId = supplierItemId;
             Quantity = quantity;
             CargoStatusId = (int)CargoStatus.OrderTaken;

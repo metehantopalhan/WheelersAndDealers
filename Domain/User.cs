@@ -25,9 +25,9 @@ namespace Domain
             Surname = surname;
             Password = password;
         }
-        public void AddPurchaseOrder(double purchaseOrderPrice, string titleOfDestinationAddress, string titleOfBill, string destinationAddressDescription, string billDescription)
+        public void AddPurchaseOrder(PurchaseOrder purchaseOrder)
         {
-            PurchaseOrders.Add(new PurchaseOrder(Id, purchaseOrderPrice, titleOfDestinationAddress, titleOfBill, destinationAddressDescription, billDescription));
+            PurchaseOrders.Add(purchaseOrder);
         }
         public void UpdateUser(string name, string surname, string password)
         {

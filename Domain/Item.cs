@@ -16,6 +16,12 @@ namespace Domain
         public Guid Id { get; private set; }
         public string ItemName { get; private set; }
         public ItemType ItemType { get; private set; }
+        public CarBrand CarBrand { get; private set; }
+        public int CarBrandId
+        {
+            get { return (int)this.ItemType; }
+            set { CarBrand = (CarBrand)value; }
+        }
         public bool IsActive { get; private set; }
         public int ItemTypeId
         {
@@ -34,13 +40,14 @@ namespace Domain
             ImageName = ItemName;
             Data = data;
         }
-        public Item(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime)
+        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime)
         {
             Id = Guid.NewGuid();
             ItemName = itemName;
             ItemDescription = itemDescription;
             ItemTypeId = itemType;
             ProductCode = productCode;
+            CarBrandId = CarBrandId;
             IsActive = true;
             GuaranteeTime = guaranteeTime;
             SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper();

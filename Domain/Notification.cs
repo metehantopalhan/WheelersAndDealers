@@ -19,6 +19,7 @@ namespace Domain
             DestinationPersonId = destinationPersonId;
             SourcePersonId = sourcePersonId;
             Description = description;
+            HasRead = false;
 
         }
         public void UpdateNotification(string description, bool hasRead)
