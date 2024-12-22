@@ -55,6 +55,9 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("CarBrandId")
+                        .HasColumnType("int");
+
                     b.Property<byte[]>("Data")
                         .HasColumnType("varbinary(max)");
 
@@ -171,6 +174,9 @@ namespace Data.Migrations
 
                     b.Property<string>("DestinationBranch")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ItemId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<double>("PurchaseOrderDetailPrice")
                         .HasColumnType("float");

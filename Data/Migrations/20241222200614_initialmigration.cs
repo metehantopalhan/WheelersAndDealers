@@ -32,6 +32,7 @@ namespace Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ItemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarBrandId = table.Column<int>(type: "int", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     ItemTypeId = table.Column<int>(type: "int", nullable: false),
                     ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -152,6 +153,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     PurchaseOrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SupplierItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),

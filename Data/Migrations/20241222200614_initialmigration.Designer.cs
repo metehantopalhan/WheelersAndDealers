@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20241220214900_initialmigration")]
+    [Migration("20241222200614_initialmigration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -57,6 +57,9 @@ namespace Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CarBrandId")
+                        .HasColumnType("int");
 
                     b.Property<byte[]>("Data")
                         .HasColumnType("varbinary(max)");
@@ -174,6 +177,9 @@ namespace Data.Migrations
 
                     b.Property<string>("DestinationBranch")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ItemId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<double>("PurchaseOrderDetailPrice")
                         .HasColumnType("float");
