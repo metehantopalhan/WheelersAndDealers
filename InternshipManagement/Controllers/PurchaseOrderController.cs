@@ -7,23 +7,35 @@ using Microsoft.AspNetCore.Mvc;
 namespace SpareParts.Controllers
 {
 
-    [Route("api/[controller]/[action]")]
+    [Route("api/purchaseOrder")]
     [ApiController]
     public class PurchaseOrderController : ControllerBase
     {
-        private readonly ISpareParts _spareparts;
+        private readonly ISpareParts _spareParts;
 
         public PurchaseOrderController(ISpareParts spareParts)
         {
-            _spareparts = spareParts;
+            _spareParts = spareParts;
         }
 
         [HttpPost]
         public async Task CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
         {
-            await _spareparts.CreatePurchaseOrder(requestDto);
+            await _spareParts.CreatePurchaseOrder(requestDto);
         }
 
+        [HttpGet]
+        public async Task GetPurchaseOrderById(Guid id)
+        {
+            await _spareParts.GetNotificationsById(id);
+
+        }
+
+        [HttpPut]
+        public async Task UpdateNotification(UpdateNotificationRequestDto requestDto)
+        {
+            await _spareParts.UpdateNotification(requestDto);
+        }
 
     }
 }

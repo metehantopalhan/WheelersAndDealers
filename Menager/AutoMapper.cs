@@ -16,6 +16,7 @@ namespace Menager
             CreateMap<PurchaseOrder, GetPurchaseOrderByIdResponseDto>()
                 .ForMember(destinationMember => destinationMember.PurchaseOrderDetailList, operation => operation.MapFrom(sourceMember => sourceMember.PurchaseOrderDetail));
             CreateMap<User, GetUserByParametersResponseDto>();
+            CreateMap<SupplierItem, GetItemSuppliersWithItemIdResponseDto>();
         }
     }
 }

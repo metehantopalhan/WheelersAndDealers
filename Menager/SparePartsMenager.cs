@@ -183,7 +183,7 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
-        public async Task UpdateSupplierItemRequestDto(UpdateSupplierItemRequestDto requestDto)
+        public async Task UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
@@ -232,5 +232,10 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
+        public async Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSupplierByItemId(Guid id)
+        {
+            List<SupplierItem> itemSupplier = await _sparePartsData.getSupplierItemByItemId(id);
+            return _mapper.Map<List<GetItemSuppliersWithItemIdResponseDto>>(itemSupplier);
+        }
     }
 }

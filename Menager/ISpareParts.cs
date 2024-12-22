@@ -21,7 +21,8 @@ namespace Menager
         Task UpdateSupplier(UpdateSuppplierRequestDto requestDto);
         Task CreateUser(CreateUserRequestDto requestDto);
         Task UpdateUser(UpdateUserRequestDto requestDto);
-        Task UpdateSupplierItemRequestDto(UpdateSupplierItemRequestDto requestDto);
+        Task UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto);
+        Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSupplierByItemId(Guid id);
         Task<GetUserByParametersResponseDto> GetUsers();
         Task<Guid?> LoginForUser(string mail, string password);
         Task<Guid?> LoginForSupplier(string mail, string password);

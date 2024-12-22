@@ -167,5 +167,10 @@ namespace Data
             item.UpdateImage(null, null);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<List<SupplierItem>> getSupplierItemByItemId(Guid id)
+        {
+            return await _dbContext.SupplierItems.Where(x => x.Id == id).ToListAsync();
+        }
     }
 }
