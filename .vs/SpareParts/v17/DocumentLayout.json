@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0F7EEB07-AAD1-4319-9656-F060F3BAFB2D}|Solution Items{0F7EEB07-AAD1-4319-9656-F060F3BAFB2D}|C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0F7EEB07-AAD1-4319-9656-F060F3BAFB2D}|Solution Items{0F7EEB07-AAD1-4319-9656-F060F3BAFB2D}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\datadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\datadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\migrations\\20241222200614_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\migrations\\20241222200614_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -107,10 +115,6 @@
       "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\sqldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\data\\datadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76F8B84D-A6F0-4013-BBCF-0151C9B39C14}|Data\\Data.csproj|solutionrelative:data\\datadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49C6D607-5183-4B24-AC16-CD103722B791}|Domain\\Domain.csproj|c:\\users\\gorke\\source\\repos\\gorkemtakak\\wheelersanddealers\\domain\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C6D607-5183-4B24-AC16-CD103722B791}|Domain\\Domain.csproj|solutionrelative:domain\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -183,19 +187,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-23T11:02:16.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20241222200614_initialmigration.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\Migrations\\20241222200614_initialmigration.cs",
               "RelativeDocumentMoniker": "Data\\Migrations\\20241222200614_initialmigration.cs",
               "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\Migrations\\20241222200614_initialmigration.cs",
               "RelativeToolTip": "Data\\Migrations\\20241222200614_initialmigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T20:06:14.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SupplierItemController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\SupplierItemController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\SupplierItemController.cs",
@@ -207,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ISpareParts.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\ISpareParts.cs",
               "RelativeDocumentMoniker": "Menager\\ISpareParts.cs",
@@ -219,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SparePartsMenager.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\SparePartsMenager.cs",
               "RelativeDocumentMoniker": "Menager\\SparePartsMenager.cs",
@@ -231,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ISparePartsData.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\ISparePartsData.cs",
               "RelativeDocumentMoniker": "Data\\ISparePartsData.cs",
@@ -243,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SparePartsData.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SparePartsData.cs",
               "RelativeDocumentMoniker": "Data\\SparePartsData.cs",
@@ -255,7 +272,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "DataDb.cs",
+              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\DataDb.cs",
+              "RelativeDocumentMoniker": "Data\\DataDb.cs",
+              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\DataDb.cs",
+              "RelativeToolTip": "Data\\DataDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T21:18:30.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\AutoMapper.cs",
               "RelativeDocumentMoniker": "Menager\\AutoMapper.cs",
@@ -267,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SupplierItem.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\SupplierItem.cs",
               "RelativeDocumentMoniker": "Domain\\SupplierItem.cs",
@@ -279,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GetItemSuppliersWithItemIdResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\ResponseDto\\GetItemSuppliersWithItemIdResponseDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\ResponseDto\\GetItemSuppliersWithItemIdResponseDto.cs",
@@ -291,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CreateSupplierItemRelationRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateSupplierItemRelationRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateSupplierItemRelationRequestDto.cs",
@@ -303,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\UserController.cs",
@@ -315,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\SupplierController.cs",
@@ -327,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\ItemController.cs",
@@ -339,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "PurchaseOrderController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\PurchaseOrderController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\PurchaseOrderController.cs",
@@ -351,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Controllers\\NotificationController.cs",
@@ -363,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\appsettings.json",
               "RelativeDocumentMoniker": "InternshipManagement\\appsettings.json",
@@ -375,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "UpdateUserRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateUserRequestDto.cs",
@@ -387,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "UploadImageRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UploadImageRequestDto.cs",
@@ -399,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "PurchaseOrder.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\PurchaseOrder.cs",
               "RelativeDocumentMoniker": "Domain\\PurchaseOrder.cs",
@@ -411,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "UpdatePurchaseOrderDetailRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdatePurchaseOrderDetailRequestDto.cs",
@@ -423,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "UpdateNotificationRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateNotificationRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateNotificationRequestDto.cs",
@@ -435,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "PurchaseOrderDetail.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\PurchaseOrderDetail.cs",
               "RelativeDocumentMoniker": "Domain\\PurchaseOrderDetail.cs",
@@ -447,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "CreatePurchaseOrderRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreatePurchaseOrderRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreatePurchaseOrderRequestDto.cs",
@@ -459,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "CreatePurchaseOrderDetailsRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreatePurchaseOrderDetailsRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreatePurchaseOrderDetailsRequestDto.cs",
@@ -471,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "CreateItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateItemRequestDto.cs",
@@ -483,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "SqlDbContext.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\SqlDbContext.cs",
               "RelativeDocumentMoniker": "Data\\SqlDbContext.cs",
@@ -495,19 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DataDb.cs",
-              "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\DataDb.cs",
-              "RelativeDocumentMoniker": "Data\\DataDb.cs",
-              "ToolTip": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Data\\DataDb.cs",
-              "RelativeToolTip": "Data\\DataDb.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:18:30.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Item.cs",
               "RelativeDocumentMoniker": "Domain\\Item.cs",
@@ -519,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Supplier.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Supplier.cs",
               "RelativeDocumentMoniker": "Domain\\Supplier.cs",
@@ -531,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Notification.cs",
               "RelativeDocumentMoniker": "Domain\\Notification.cs",
@@ -543,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "CarBrand.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Common\\CarBrand.cs",
               "RelativeDocumentMoniker": "Common\\CarBrand.cs",
@@ -555,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Admin.cs",
               "RelativeDocumentMoniker": "Domain\\Admin.cs",
@@ -567,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "UpdateSupplierItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSupplierItemRequestDto.cs",
@@ -579,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "UpdateSuppplierRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateSuppplierRequestDto.cs",
@@ -591,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "CreateSupplierRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateSupplierRequestDto.cs",
@@ -603,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "CreateSupplierItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateSupplierItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateSupplierItemRequestDto.cs",
@@ -615,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "UpdateItemRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\UpdateItemRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\UpdateItemRequestDto.cs",
@@ -627,7 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "CargoStatus.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Common\\CargoStatus.cs",
               "RelativeDocumentMoniker": "Common\\CargoStatus.cs",
@@ -639,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "UserType.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Common\\UserType.cs",
               "RelativeDocumentMoniker": "Common\\UserType.cs",
@@ -651,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "CreateNotificationRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Dtos\\RequestDto\\CreateNotificationRequestDto.cs",
               "RelativeDocumentMoniker": "Menager\\Dtos\\RequestDto\\CreateNotificationRequestDto.cs",
@@ -663,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gorke\\source\\repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\Program.cs",
               "RelativeDocumentMoniker": "InternshipManagement\\Program.cs",
