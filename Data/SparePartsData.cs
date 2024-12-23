@@ -1,5 +1,6 @@
 ﻿using Data.DbContextLib;
 using Domain;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.InteropServices;
 
@@ -28,6 +29,26 @@ namespace Data
             return await _dbContext.Items.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        {
+            var predicate = PredicateBuilder.New<Item>(true);
+
+            if (searchText != null)
+            {
+                predicate.And(x => x.SearchText.Contains(searchText.ToUpper()));
+            }
+            if (isActive != null)
+            {
+                predicate.And(x => x.IsActive == isActive);
+            }
+            else
+            {
+                predicate.And(x => x.IsActive == true);
+            }
+            return await _dbContext.Items.Where(predicate).Skip(skip).Take(take).OrderBy(x => x.ItemName).ToListAsync();
+
+        }
+
         public async Task<List<Item>> getItems()
         {
             return await _dbContext.Items.ToListAsync();
@@ -35,7 +56,24 @@ namespace Data
 
         public async Task<PurchaseOrder> getPurchaseOrderById(Guid id)
         {
-            return await _dbContext.PurchaseOrders.FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.PurchaseOrders.Include(x => x.PurchaseOrderDetail).FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<Guid?> GetAdminByMailAndPassword(string email, string password)
+        {
+            var admin = await _dbContext.Admins.FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
+            return admin != null ? admin.Id : null;
+        }
+
+        public async Task<Guid?> GetUserByMailAndPassword(string email, string password)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
+            return user != null ? user.Id : null;
+        }
+        public async Task<Guid?> GetSupplierByMailAndPassword(string email, string password)
+        {
+            var supplier = await _dbContext.Suppliers.FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
+            return supplier != null ? supplier.Id : null;
         }
 
         public async Task<List<PurchaseOrder>> getPurchaseOrders()
@@ -56,16 +94,6 @@ namespace Data
         public async Task<Supplier> getSupplierById(Guid id)
         {
             return await _dbContext.Suppliers.FirstOrDefaultAsync(x => x.Id == id);
-        }
-
-        public async Task<List<SupplierContactInformation>> getSupplierConcactInformations()
-        {
-            return await _dbContext.SupplierContactInformations.ToListAsync();
-        }
-
-        public async Task<SupplierContactInformation> getSupplierContactInformationById(Guid id)
-        {
-            return await _dbContext.SupplierContactInformations.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<List<SupplierItem>> getSupplierContactInformations()
@@ -121,6 +149,11 @@ namespace Data
             await _dbContext.PurchaseOrders.AddAsync(purchaseOrder);
         }
 
+        public async Task CreateUser(User user)
+        {
+            await _dbContext.Users.AddAsync(user);
+        }
+
         public async Task UploadImageForItem(Guid id, string imageName, byte[] data)
         {
             var item = await getItemById(id);
@@ -133,6 +166,11 @@ namespace Data
             var item = await getItemById(id);
             item.UpdateImage(null, null);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<List<SupplierItem>> getSupplierItemByItemId(Guid id)
+        {
+            return await _dbContext.SupplierItems.Where(x => x.Id == id).ToListAsync();
         }
     }
 }

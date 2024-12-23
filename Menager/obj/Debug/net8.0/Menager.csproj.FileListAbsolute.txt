@@ -21,3 +21,11 @@ C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net
 C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\refint\Menager.dll
 C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.pdb
 C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\ref\Menager.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.csproj.AssemblyReference.cache
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Common.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Data.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Domain.dll
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Common.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Data.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\bin\Debug\net8.0\Domain.pdb
+C:\Users\gorke\Source\Repos\gorkemtakak\WheelersAndDealers\Menager\obj\Debug\net8.0\Menager.csproj.Up2Date

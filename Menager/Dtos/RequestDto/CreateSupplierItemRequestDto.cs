@@ -8,6 +8,7 @@ namespace Menager.Dtos.RequestDto
 {
     public class CreateSupplierItemRequestDto
     {
+        public Guid UserId { get; set; }
         public Guid ItemId { get; set; }
         public Guid SupplierId { get; set; }
         public double Price { get; set; }

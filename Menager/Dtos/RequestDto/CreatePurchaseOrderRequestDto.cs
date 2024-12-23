@@ -8,7 +8,7 @@
         public string TitleOfBill { get; set; }
         public string DestinationAddressDescription { get; set; }
         public string BillDescription { get; set; }
-        public List<CreatePurchaseOrderDetailsRequestDto> PurchaseOrderDetailList = new();
-        
+        public List<CreatePurchaseOrderDetailsRequestDto> PurchaseOrderDetailList { get; set; } = new();
+
     }
 }

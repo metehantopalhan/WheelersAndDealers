@@ -28,7 +28,7 @@ namespace Data.DbContextLib
 
             modelBuilder.Entity<PurchaseOrderDetail>().Ignore(c => c.PurchaseOrderDetailStatus);
             modelBuilder.Entity<Item>().Ignore(c => c.ItemType);
-            modelBuilder.Entity<Notification>().Ignore(c => c.UserType);
+            modelBuilder.Entity<Item>().Ignore(c => c.CarBrand);
 
         }
         public SqlDbContext()

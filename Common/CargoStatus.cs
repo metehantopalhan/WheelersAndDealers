@@ -2,10 +2,11 @@
 {
     public enum CargoStatus
     {
-        GivenToCargo=1,
-        OnTransferProcess=2,
-        OnDeliveryBranch=3,
-        InCourierDistribution=4,
-        Done=5
+        OrderTaken=1,
+        GivenToCargo=2,
+        OnTransferProcess=3,
+        OnDeliveryBranch=4,
+        InCourierDistribution=5,
+        Done=6
     }
 }
