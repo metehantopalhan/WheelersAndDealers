@@ -47,14 +47,16 @@ namespace Menager
             }
 
             PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
-             user.AddPurchaseOrder(purchaseOrder);
+            user.AddPurchaseOrder(purchaseOrder);
             await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
+            await _sparePartsData.PersistAsync();
+
             foreach (var purchaseOrderDetail in requestDto.PurchaseOrderDetailList)
             {
-                var detail = purchaseOrder.AddPurchaseOrderDetail(purchaseOrderDetail.SupplierItemId, purchaseOrderDetail.ItemId, purchaseOrderDetail.Quantity, purchaseOrderDetail.PurchaseOrderDetailPrice);
+                var detail = purchaseOrder.AddPurchaseOrderDetail(purchaseOrder.Id, purchaseOrderDetail.SupplierItemId, purchaseOrderDetail.ItemId, purchaseOrderDetail.Quantity, purchaseOrderDetail.PurchaseOrderDetailPrice);
                 await _sparePartsData.CreatePurchaseOrderDetail(detail);
             }
-
+            await _sparePartsData.PersistAsync();
             return ("", true);
         }
 

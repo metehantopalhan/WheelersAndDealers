@@ -10,11 +10,13 @@ namespace Menager
         {
             CreateMap<Item, GetItemByIdResponseDto>()
             .ForMember(destinationMember => destinationMember.SupplierItemLists, operation => operation.MapFrom(sourceMember => sourceMember.SupplierItems));
+            CreateMap<SupplierItem, SupplierItemListResponseDto>();
 
             CreateMap<Item, GetItemByParametersResponseDto>();
             CreateMap<Notification, GetNotificationResponseDto>();
             CreateMap<PurchaseOrder, GetPurchaseOrderByIdResponseDto>()
                 .ForMember(destinationMember => destinationMember.PurchaseOrderDetailList, operation => operation.MapFrom(sourceMember => sourceMember.PurchaseOrderDetail));
+            CreateMap<PurchaseOrderDetail, PurchaseOrderDetailResponseDto>();
             CreateMap<User, GetUserByParametersResponseDto>();
             CreateMap<SupplierItem, GetItemSuppliersWithItemIdResponseDto>();
         }

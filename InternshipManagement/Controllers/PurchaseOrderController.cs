@@ -32,9 +32,7 @@ namespace SpareParts.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPurchaseOrderById(Guid id)
         {
-            await _spareParts.GetPurchaseOrderById(id);
-
-            return Ok();
+            return Ok(await _spareParts.GetPurchaseOrderById(id));
         }
         [HttpPut]
         public async Task<IActionResult> UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)

@@ -12,7 +12,7 @@ namespace Domain
         public User User { get; private set; }
         public Guid UserId { get; private set; }
         public double PurchaseOrderPrice { get; private set; }
-        public List<PurchaseOrderDetail> PurchaseOrderDetail = new();
+        public List<PurchaseOrderDetail> PurchaseOrderDetail { get; set; } = new();
         public DateTime PurchaseOrderDate { get; private set; }
         public string TitleOfDestinationAddress { get; private set; }
         public string TitleOfBill { get; private set; }
@@ -27,11 +27,12 @@ namespace Domain
             TitleOfDestinationAddress = titleOfDestinationAddress;
             TitleOfBill = titleOfBill;
             DestinationAddressDescription = destinationAddressDescription;
+            BillDescription = billDescription;
         }
-        public PurchaseOrderDetail AddPurchaseOrderDetail(Guid supplierItemId, Guid itemId, int quantity, double purchaseOrderDetailPrice)
+        public PurchaseOrderDetail AddPurchaseOrderDetail(Guid purchaseOrderId,Guid supplierItemId, Guid itemId, int quantity, double purchaseOrderDetailPrice)
         {
-            var detail = new PurchaseOrderDetail(Id, itemId, supplierItemId, quantity, purchaseOrderDetailPrice);
-            PurchaseOrderDetail.Add(new PurchaseOrderDetail(Id, itemId, supplierItemId, quantity, purchaseOrderDetailPrice));
+            var detail = new PurchaseOrderDetail(purchaseOrderId, itemId, supplierItemId, quantity, purchaseOrderDetailPrice);
+            PurchaseOrderDetail.Add(detail);
             return detail;
         }
     }
