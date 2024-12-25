@@ -17,21 +17,25 @@ namespace SpareParts.Controllers
         }
 
         [HttpPost]
-        public async Task CreateNotification(CreateNotificationRequestDto requestDto)
+        public async Task<IActionResult> CreateNotification(CreateNotificationRequestDto requestDto)
         {
             await _spareParts.CreateNotification(requestDto);
+            return Ok();
         }
         [HttpGet]
-        public async Task<GetPurchaseOrderByIdResponseDto> GetNotificationById(Guid id)
+        public async Task<IActionResult> GetNotificationById(Guid id)
         {
-            return await _spareParts.GetPurchaseOrderById(id);
+            return Ok(await _spareParts.GetNotificationsById(id));
 
         }
 
         [HttpPut]
-        public async Task UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
+        public async Task<IActionResult> UpdateNotification(UpdateNotificationRequestDto requestDto)
         {
-            await _spareParts.UpdatePurchaseOrder(requestDto);
+            await _spareParts.UpdateNotification(requestDto);
+            return Ok();
         }
+
+
     }
 }

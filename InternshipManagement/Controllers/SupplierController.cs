@@ -16,20 +16,30 @@ namespace SpareParts.Controllers
         }
 
         [HttpPut]
-        public async Task UpdateSupplier(UpdateSuppplierRequestDto requestDto)
+        public async Task<IActionResult> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
         {
-            await _spareParts.UpdateSupplier(requestDto);
+            var retval = await _spareParts.UpdateSupplier(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
 
         [HttpPost]
-        public async Task CreateSupplier(CreateSupplierRequestDto requestDto)
+        public async Task<IActionResult> CreateSupplier(CreateSupplierRequestDto requestDto)
         {
-            await _spareParts.CreateSupplier(requestDto);
+            var retval = await _spareParts.CreateSupplier(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
         [HttpGet]
-        public async Task<Guid?> LoginForSupplier(string email, string password)
+        public async Task<IActionResult> LoginForSupplier(string email, string password)
         {
-            return await _spareParts.LoginForSupplier(email, password);
+            return Ok(await _spareParts.LoginForSupplier(email, password));
         }
     }
 }

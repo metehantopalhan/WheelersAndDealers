@@ -131,7 +131,7 @@ namespace Data
 
         public async Task CreateItem(Item item)
         {
-            await _dbContext.AddAsync(item);
+            await _dbContext.Items.AddAsync(item);
         }
 
         public async Task CreateSupplier(Supplier supplier)

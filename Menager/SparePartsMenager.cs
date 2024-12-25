@@ -17,17 +17,18 @@ namespace Menager
             _mapper = mapper;
             _sparePartsData = sparePartsData;
         }
-        public async Task CreateItem(CreateItemRequestDto requestDto)
+        public async Task<(string, bool)> CreateItem(CreateItemRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
 
             Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemTypeId, requestDto.CarBrandId, requestDto.ProductCode, requestDto.GuaranteeTime);
             await _sparePartsData.CreateItem(item);
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
         public async Task CreateNotification(CreateNotificationRequestDto requestDto)
@@ -37,36 +38,38 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
-        public async Task CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
+        public async Task<(string, bool)> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
         {
             var user = await _sparePartsData.getUserById(requestDto.UserId);
             if (user == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
 
             PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
             user.AddPurchaseOrder(purchaseOrder);
             requestDto.PurchaseOrderDetailList.ForEach(x => purchaseOrder.AddPurchaseOrderDetail(x.SupplierItemId, x.ItemId, x.Quantity, x.PurchaseOrderDetailPrice));
             await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
+            return ("", true);
         }
 
-        public async Task CreateSupplier(CreateSupplierRequestDto requestDto)
+        public async Task<(string, bool)> CreateSupplier(CreateSupplierRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
 
             var supplier = new Supplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Email, requestDto.Password, requestDto.Phone, requestDto.SupplierLocation);
             await _sparePartsData.CreateSupplier(supplier);
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
         public async Task CreateUser(CreateUserRequestDto requestDto)
         {
-            var user = new User(requestDto.Name, requestDto.Surname, requestDto.Password);
+            var user = new User(requestDto.Name, requestDto.Surname, requestDto.Email, requestDto.Password);
             await _sparePartsData.CreateUser(user);
             await _sparePartsData.PersistAsync();
         }
@@ -114,29 +117,30 @@ namespace Menager
             return await _sparePartsData.GetUserByMailAndPassword(email, password);
         }
 
-        public async Task UpdateItem(UpdateItemRequestDto requestDto)
+        public async Task<(string, bool)> UpdateItem(UpdateItemRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
             item.UpdateItem(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemType, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.IsActive);
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
-        public async Task CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto)
+        public async Task<(string, bool)> CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
             item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
             await _sparePartsData.PersistAsync();
-
+            return ("", true);
 
         }
 
@@ -147,7 +151,7 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
-        public async Task UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
+        public async Task<(string, bool)> UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
         {
             var purchaseOrder = await _sparePartsData.getPurchaseOrderById(requestDto.Id);
             if (purchaseOrder is null)
@@ -159,31 +163,33 @@ namespace Menager
                 var detail = requestDto.UpdatePurchaseOrderList.FirstOrDefault(x => x.Id == purchaseOrderDetail.Id);
                 if (detail == null)
                 {
-                    throw new Exception("Related detail could not be found");
+                    return ("Related detail could not be found", false);
                 }
                 purchaseOrderDetail.UpdatePurchaseOrderDetail(detail.CargoStatusId, detail.DestinationBranch ?? " ", detail.CargoNumber ?? " ", detail.PurchaseOrderStatusId);
             }
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
-        public async Task UpdateSupplier(UpdateSuppplierRequestDto requestDto)
+        public async Task<(string, bool)> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
             {
-                throw new Exception("You are not allowed to do this action");
+                return ("You are not allowed to do this action", false);
             }
             var supplier = await _sparePartsData.getSupplierById(requestDto.Id);
             if (supplier == null)
             {
-                throw new Exception("Supplier could not be found");
+                return ("Supplier could not be found", false);
             }
 
             supplier.UpdateSupplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Phone, requestDto.SupplierLocation);
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
-        public async Task UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
+        public async Task<(string, bool)> UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
         {
             var admin = await _sparePartsData.getAdminById(requestDto.UserId);
             if (admin == null)
@@ -193,11 +199,12 @@ namespace Menager
             var supplierItem = await _sparePartsData.getSupplierItemById(requestDto.Id);
             if (supplierItem == null)
             {
-                throw new Exception("Supplier could not be found");
+                return ("Supplier could not be found", false);
             }
 
             supplierItem.UpdateSupplierItem(requestDto.IsActive, requestDto.Price, requestDto.SupplierName, requestDto.ItemName);
             await _sparePartsData.PersistAsync();
+            return ("", true);
         }
 
         public async Task UpdateUser(UpdateUserRequestDto requestDto)
@@ -207,7 +214,7 @@ namespace Menager
             {
                 throw new Exception("User could not be found");
             }
-            user.UpdateUser(requestDto.Name, requestDto.Surname, requestDto.Password);
+            user.UpdateUser(requestDto.Name, requestDto.Surname, requestDto.Email, requestDto.Password);
             await _sparePartsData.PersistAsync();
         }
 

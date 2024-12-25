@@ -18,21 +18,23 @@ namespace Domain
         public string Email { get; private set; }
         public string Password { get; private set; }
         public List<PurchaseOrder> PurchaseOrders = new List<PurchaseOrder>();
-        public User(string name, string surname, string password)
+        public User(string name, string surname, string email, string password)
         {
             Id = Guid.NewGuid();
             Name = name;
             Surname = surname;
+            Email = email;
             Password = password;
         }
         public void AddPurchaseOrder(PurchaseOrder purchaseOrder)
         {
             PurchaseOrders.Add(purchaseOrder);
         }
-        public void UpdateUser(string name, string surname, string password)
+        public void UpdateUser(string name, string surname, string email, string password)
         {
             Name = name;
             Surname = surname;
+            Email = email;
             Password = password;
         }
 

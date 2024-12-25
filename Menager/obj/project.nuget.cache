@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7+jBPKXFwHQ=",
+  "dgSpecHash": "9rxht3Gpf18=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj",
+  "projectFilePath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gorke\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gorke\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

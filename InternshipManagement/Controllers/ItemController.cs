@@ -17,24 +17,34 @@ namespace SpareParts.Controllers
         }
 
         [HttpPost]
-        public async Task CreateItem(CreateItemRequestDto requestDto)
+        public async Task<IActionResult> CreateItem(CreateItemRequestDto requestDto)
         {
-            await _spareParts.CreateItem(requestDto);
+            var retval = await _spareParts.CreateItem(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
         [HttpGet("id")]
-        public async Task<GetItemByIdResponseDto> GetItemById(Guid id)
+        public async Task<IActionResult> GetItemById(Guid id)
         {
-            return await _spareParts.GetItemById(id);
+            return Ok(await _spareParts.GetItemById(id));
         }
         [HttpPut]
-        public async Task UpdateItem(UpdateItemRequestDto requestDto)
+        public async Task<IActionResult> UpdateItem(UpdateItemRequestDto requestDto)
         {
-            await _spareParts.UpdateItem(requestDto);
+            var retval = await _spareParts.UpdateItem(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
         [HttpGet]
-        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        public async Task<IActionResult> GetItemByParameters(string? searchText, bool? isActive, int skip, int take)
         {
-            return await _spareParts.GetItemByParameters(searchText, isActive, skip, take);
+            return Ok(await _spareParts.GetItemByParameters(searchText, isActive, skip, take));
         }
 
     }
