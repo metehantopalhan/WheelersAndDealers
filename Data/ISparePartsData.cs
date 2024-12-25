@@ -32,5 +32,6 @@ namespace Data
         Task<Guid?> GetAdminByMailAndPassword(string email, string password);
         Task<Guid?> GetUserByMailAndPassword(string email, string password);
         Task<Guid?> GetSupplierByMailAndPassword(string email, string password);
+        Task CreatePurchaseOrderDetail(PurchaseOrderDetail purchaseOrderdetail);
     }
 }

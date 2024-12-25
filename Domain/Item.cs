@@ -34,7 +34,7 @@ namespace Domain
         public string? ImageName { get; private set; }
         public byte[]? Data { get; private set; }
         public string SearchText { get; private set; }
-        public List<SupplierItem> SupplierItems = new List<SupplierItem>();
+        public List<SupplierItem> SupplierItems { get; set; } = new List<SupplierItem>();
         public void UpdateImage(string? imageName, byte[]? data)
         {
             ImageName = ItemName;
@@ -61,9 +61,11 @@ namespace Domain
             IsActive = isActive;
         }
 
-        public void AddSupplierItem(Guid supplierId, double price, string supplierName)
+        public SupplierItem AddSupplierItem(Guid supplierId, double price, string supplierName)
         {
-            SupplierItems.Add(new SupplierItem(Id, supplierId, price, supplierName, ItemName));
+            var supplier = new SupplierItem(Id, supplierId, price, supplierName, ItemName);
+            SupplierItems.Add(supplier);
+            return supplier;
         }
     }
 }

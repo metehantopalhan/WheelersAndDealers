@@ -36,7 +36,7 @@ namespace Domain
             ItemId=itemId;
             SupplierItemId = supplierItemId;
             Quantity = quantity;
-            CargoStatusId = (int)CargoStatus.OrderTaken;
+            CargoStatusId = 1;
             PurchaseOrderDetailPrice = purchaseOrderDetailPrice;
             PurchaseOrderDetailStatusId = (int)PurchaseOrderDetailStatus.Pending;
 

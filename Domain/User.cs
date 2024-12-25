@@ -26,9 +26,10 @@ namespace Domain
             Email = email;
             Password = password;
         }
-        public void AddPurchaseOrder(PurchaseOrder purchaseOrder)
+        public PurchaseOrder AddPurchaseOrder(PurchaseOrder purchaseOrder)
         {
             PurchaseOrders.Add(purchaseOrder);
+            return purchaseOrder;
         }
         public void UpdateUser(string name, string surname, string email, string password)
         {

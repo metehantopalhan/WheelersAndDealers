@@ -149,7 +149,7 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PurchaseOrderDetail",
+                name: "PurchaseOrderDetails",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -157,7 +157,6 @@ namespace Data.Migrations
                     PurchaseOrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SupplierItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    CargoStatus = table.Column<int>(type: "int", nullable: false),
                     CargoStatusId = table.Column<int>(type: "int", nullable: false),
                     DestinationBranch = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CargoNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -166,15 +165,15 @@ namespace Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PurchaseOrderDetail", x => x.Id);
+                    table.PrimaryKey("PK_PurchaseOrderDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrderDetail_PurchaseOrders_PurchaseOrderId",
+                        name: "FK_PurchaseOrderDetails_PurchaseOrders_PurchaseOrderId",
                         column: x => x.PurchaseOrderId,
                         principalTable: "PurchaseOrders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrderDetail_SupplierItems_SupplierItemId",
+                        name: "FK_PurchaseOrderDetails_SupplierItems_SupplierItemId",
                         column: x => x.SupplierItemId,
                         principalTable: "SupplierItems",
                         principalColumn: "Id",
@@ -182,13 +181,13 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PurchaseOrderDetail_PurchaseOrderId",
-                table: "PurchaseOrderDetail",
+                name: "IX_PurchaseOrderDetails_PurchaseOrderId",
+                table: "PurchaseOrderDetails",
                 column: "PurchaseOrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PurchaseOrderDetail_SupplierItemId",
-                table: "PurchaseOrderDetail",
+                name: "IX_PurchaseOrderDetails_SupplierItemId",
+                table: "PurchaseOrderDetails",
                 column: "SupplierItemId");
 
             migrationBuilder.CreateIndex(
@@ -217,7 +216,7 @@ namespace Data.Migrations
                 name: "Notifications");
 
             migrationBuilder.DropTable(
-                name: "PurchaseOrderDetail");
+                name: "PurchaseOrderDetails");
 
             migrationBuilder.DropTable(
                 name: "PurchaseOrders");

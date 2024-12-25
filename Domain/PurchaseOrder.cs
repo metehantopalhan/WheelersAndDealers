@@ -28,9 +28,11 @@ namespace Domain
             TitleOfBill = titleOfBill;
             DestinationAddressDescription = destinationAddressDescription;
         }
-        public void AddPurchaseOrderDetail(Guid supplierItemId, Guid itemId, int quantity, double purchaseOrderDetailPrice)
+        public PurchaseOrderDetail AddPurchaseOrderDetail(Guid supplierItemId, Guid itemId, int quantity, double purchaseOrderDetailPrice)
         {
+            var detail = new PurchaseOrderDetail(Id, itemId, supplierItemId, quantity, purchaseOrderDetailPrice);
             PurchaseOrderDetail.Add(new PurchaseOrderDetail(Id, itemId, supplierItemId, quantity, purchaseOrderDetailPrice));
+            return detail;
         }
     }
 }

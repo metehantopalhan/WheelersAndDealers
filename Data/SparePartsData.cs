@@ -148,6 +148,10 @@ namespace Data
         {
             await _dbContext.PurchaseOrders.AddAsync(purchaseOrder);
         }
+        public async Task CreatePurchaseOrderDetail(PurchaseOrderDetail purchaseOrderdetail)
+        {
+            await _dbContext.PurchaseOrderDetails.AddAsync(purchaseOrderdetail);
+        }
 
         public async Task CreateUser(User user)
         {

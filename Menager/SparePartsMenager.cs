@@ -47,9 +47,14 @@ namespace Menager
             }
 
             PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
-            user.AddPurchaseOrder(purchaseOrder);
-            requestDto.PurchaseOrderDetailList.ForEach(x => purchaseOrder.AddPurchaseOrderDetail(x.SupplierItemId, x.ItemId, x.Quantity, x.PurchaseOrderDetailPrice));
+             user.AddPurchaseOrder(purchaseOrder);
             await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
+            foreach (var purchaseOrderDetail in requestDto.PurchaseOrderDetailList)
+            {
+                var detail = purchaseOrder.AddPurchaseOrderDetail(purchaseOrderDetail.SupplierItemId, purchaseOrderDetail.ItemId, purchaseOrderDetail.Quantity, purchaseOrderDetail.PurchaseOrderDetailPrice);
+                await _sparePartsData.CreatePurchaseOrderDetail(detail);
+            }
+
             return ("", true);
         }
 
@@ -138,7 +143,8 @@ namespace Menager
                 return ("You are not allowed to do this action", false);
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
-            item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
+            var supplierItem = item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
+            await _sparePartsData.CreateSupplierItem(supplierItem);
             await _sparePartsData.PersistAsync();
             return ("", true);
 

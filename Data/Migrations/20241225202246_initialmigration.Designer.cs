@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20241222200614_initialmigration")]
+    [Migration("20241225202246_initialmigration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -169,9 +169,6 @@ namespace Data.Migrations
                     b.Property<string>("CargoNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CargoStatus")
-                        .HasColumnType("int");
-
                     b.Property<int>("CargoStatusId")
                         .HasColumnType("int");
 
@@ -202,7 +199,7 @@ namespace Data.Migrations
 
                     b.HasIndex("SupplierItemId");
 
-                    b.ToTable("PurchaseOrderDetail");
+                    b.ToTable("PurchaseOrderDetails");
                 });
 
             modelBuilder.Entity("Domain.Supplier", b =>
@@ -338,7 +335,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.SupplierItem", b =>
                 {
                     b.HasOne("Domain.Item", "Item")
-                        .WithMany()
+                        .WithMany("SupplierItems")
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -352,6 +349,11 @@ namespace Data.Migrations
                     b.Navigation("Item");
 
                     b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Domain.Item", b =>
+                {
+                    b.Navigation("SupplierItems");
                 });
 #pragma warning restore 612, 618
         }

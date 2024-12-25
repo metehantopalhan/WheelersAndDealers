@@ -799,12 +799,46 @@
         },
         "additionalProperties": false
       },
+      "UpdatePurchaseOrderDetailRequestDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "cargoStatusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "destinationBranch": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargoNumber": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "purchaseOrderStatusId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdatePurchaseOrderRequestDto": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
             "format": "uuid"
+          },
+          "updatePurchaseOrderList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdatePurchaseOrderDetailRequestDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
