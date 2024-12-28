@@ -98,6 +98,22 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "itemType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "brandId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {

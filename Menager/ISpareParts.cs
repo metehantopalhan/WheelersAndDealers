@@ -8,7 +8,7 @@ namespace Menager
         Task<Guid?> LoginForAdmin(string mail, string password);
         Task<(string, bool)> CreateItem(CreateItemRequestDto requestDto);
         Task<(string, bool)> UpdateItem(UpdateItemRequestDto requestDto);
-        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take);
+        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId);
         Task<GetItemByIdResponseDto> GetItemById(Guid id);
         Task UploadImage(UploadImageRequestDto requestDto);
         Task CreateNotification(CreateNotificationRequestDto requestDto);

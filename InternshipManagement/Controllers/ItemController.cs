@@ -42,9 +42,9 @@ namespace SpareParts.Controllers
             return UnprocessableEntity(retval.Item1);
         }
         [HttpGet]
-        public async Task<IActionResult> GetItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        public async Task<IActionResult> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
         {
-            return Ok(await _spareParts.GetItemByParameters(searchText, isActive, skip, take));
+            return Ok(await _spareParts.GetItemByParameters(searchText, isActive, skip, take, itemType, brandId));
         }
 
     }

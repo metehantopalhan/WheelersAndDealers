@@ -29,7 +29,7 @@ namespace Data
             return await _dbContext.Items.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
         {
             var predicate = PredicateBuilder.New<Item>(true);
 
@@ -44,6 +44,14 @@ namespace Data
             else
             {
                 predicate.And(x => x.IsActive == true);
+            }
+            if (itemType is not null)
+            {
+                predicate.And(x => x.ItemTypeId == itemType);
+            }
+            if (brandId is not null)
+            {
+                predicate.And(x => x.CarBrandId == brandId);
             }
             return await _dbContext.Items.Where(predicate).Skip(skip).Take(take).OrderBy(x => x.ItemName).ToListAsync();
 

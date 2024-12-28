@@ -87,9 +87,9 @@ namespace Menager
             return _mapper.Map<GetItemByIdResponseDto>(item);
         }
 
-        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
         {
-            var itemList = await _sparePartsData.getItemByParameters(searchText, isActive, skip, take);
+            var itemList = await _sparePartsData.getItemByParameters(searchText, isActive, skip, take, itemType, brandId);
             return _mapper.Map<List<GetItemByParametersResponseDto>>(itemList);
         }
 
