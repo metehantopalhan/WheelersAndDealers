@@ -29,6 +29,9 @@ namespace Domain
             set { ItemType = (ItemType)value; }
         }
         public string ItemDescription { get; private set; }
+        public string Category { get; private set; }
+        public string Origin { get; private set; }
+        public DateTime Year { get; private set; }
         public string ProductCode { get; private set; }
         public string GuaranteeTime { get; private set; }
         public string? ImageName { get; private set; }
@@ -40,7 +43,7 @@ namespace Domain
             ImageName = ItemName;
             Data = data;
         }
-        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime)
+        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime, string category, string origin, DateTime year)
         {
             Id = Guid.NewGuid();
             ItemName = itemName;
@@ -51,14 +54,20 @@ namespace Domain
             IsActive = true;
             GuaranteeTime = guaranteeTime;
             SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper();
+            Category = category;
+            Origin = origin;
+            Year = year;
         }
-        public void UpdateItem(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime, bool isActive)
+        public void UpdateItem(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime, bool isActive, string category, string origin, DateTime year)
         {
             ItemName = itemName;
             ItemDescription = itemDescription;
             ItemTypeId = itemType;
             ProductCode = productCode;
             IsActive = isActive;
+            Category = category;
+            Origin = origin;
+            Year = year;
         }
 
         public SupplierItem AddSupplierItem(Guid supplierId, double price, string supplierName)

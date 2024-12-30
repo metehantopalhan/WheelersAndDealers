@@ -9,6 +9,9 @@
         public string ItemDescription { get; set; }
         public string ProductCode { get; set; }
         public string GuaranteeTime { get; set; }
-        public bool IsActive {  get; set; }
+        public bool IsActive { get; set; }
+        public string Category { get; set; }
+        public string Origin { get; set; }
+        public DateTime Year { get; set; }
     }
 }

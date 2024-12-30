@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20241225202246_initialmigration")]
+    [Migration("20241230171754_initialmigration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -61,6 +61,10 @@ namespace Data.Migrations
                     b.Property<int>("CarBrandId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<byte[]>("Data")
                         .HasColumnType("varbinary(max)");
 
@@ -85,6 +89,10 @@ namespace Data.Migrations
                     b.Property<int>("ItemTypeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Origin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -92,6 +100,9 @@ namespace Data.Migrations
                     b.Property<string>("SearchText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Year")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -316,7 +327,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.PurchaseOrderDetail", b =>
                 {
                     b.HasOne("Domain.PurchaseOrder", "PurchaseOrder")
-                        .WithMany()
+                        .WithMany("PurchaseOrderDetail")
                         .HasForeignKey("PurchaseOrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -354,6 +365,11 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.Item", b =>
                 {
                     b.Navigation("SupplierItems");
+                });
+
+            modelBuilder.Entity("Domain.PurchaseOrder", b =>
+                {
+                    b.Navigation("PurchaseOrderDetail");
                 });
 #pragma warning restore 612, 618
         }

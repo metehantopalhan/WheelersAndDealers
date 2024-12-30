@@ -25,7 +25,7 @@ namespace Menager
                 return ("You are not allowed to do this action", false);
             }
 
-            Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemTypeId, requestDto.CarBrandId, requestDto.ProductCode, requestDto.GuaranteeTime);
+            Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemTypeId, requestDto.CarBrandId, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.Category, requestDto.Origin, requestDto.Year);
             await _sparePartsData.CreateItem(item);
             await _sparePartsData.PersistAsync();
             return ("", true);
@@ -132,7 +132,7 @@ namespace Menager
                 return ("You are not allowed to do this action", false);
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
-            item.UpdateItem(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemType, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.IsActive);
+            item.UpdateItem(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemType, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.IsActive, requestDto.Category, requestDto.Origin, requestDto.Year);
             await _sparePartsData.PersistAsync();
             return ("", true);
         }
