@@ -7,7 +7,7 @@
         public string DestinationAddressDescription { get; set; }
         public string BillDescription { get; set; }
         public DateTime PurchaseOrderDate { get; set; }
-        public List<PurchaseOrderDetailResponseDto> PurchaseOrderDetailList = new();
+        public List<PurchaseOrderDetailResponseDto> PurchaseOrderDetailList { get; set; } = new();
 
     }
 }

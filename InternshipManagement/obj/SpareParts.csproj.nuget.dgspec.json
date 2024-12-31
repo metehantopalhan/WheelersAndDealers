@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj": {}
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\SpareParts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj": {
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\obj\\",
+        "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
@@ -39,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -60,21 +66,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj": {
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\obj\\",
+        "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,14 +92,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\Domain.csproj"
               }
             }
           }
@@ -103,7 +114,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -158,21 +170,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj": {
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,14 +196,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj"
               }
             }
           }
@@ -201,7 +218,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -222,21 +240,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj": {
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\SpareParts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj",
+        "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\SpareParts.csproj",
         "projectName": "SpareParts",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj",
+        "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\SpareParts.csproj",
         "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\obj\\",
+        "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -244,17 +266,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj"
               },
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj"
               }
             }
           }
@@ -268,7 +291,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -308,21 +332,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj": {
+    "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj",
+        "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj",
         "projectName": "Menager",
-        "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\Menager.csproj",
+        "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\Menager.csproj",
         "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Menager\\obj\\",
+        "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Menager\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\gorke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -330,17 +358,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Common\\Common.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj"
               },
-              "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\Data\\Data.csproj"
+              "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Data\\Data.csproj"
               }
             }
           }
@@ -354,7 +383,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -381,7 +411,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

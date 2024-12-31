@@ -13,6 +13,7 @@ namespace Data.DbContextLib
             this.Configuration = configuration;
         }
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        public DbSet<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Item> Items { get; set; }

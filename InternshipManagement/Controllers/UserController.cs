@@ -15,19 +15,21 @@ namespace SpareParts.Controllers
             _spareParts = spareParts;
         }
         [HttpGet]
-        public async Task<Guid?> LoginForUser(string username, string password)
+        public async Task<IActionResult> LoginForUser(string username, string password)
         {
-            return await _spareParts.LoginForUser(username, password);
+            return Ok(await _spareParts.LoginForUser(username, password));
         }
         [HttpPost]
-        public async Task CreateUser(CreateUserRequestDto requestDto)
+        public async Task<IActionResult> CreateUser(CreateUserRequestDto requestDto)
         {
             await _spareParts.CreateUser(requestDto);
+            return Ok();
         }
         [HttpPut]
-        public async Task UpdateUser(UpdateUserRequestDto requestDto)
+        public async Task<IActionResult> UpdateUser(UpdateUserRequestDto requestDto)
         {
             await _spareParts.UpdateUser(requestDto);
+            return Ok();
         }
 
     }

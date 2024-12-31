@@ -19,22 +19,30 @@ namespace SpareParts.Controllers
         }
 
         [HttpPost]
-        public async Task CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
+        public async Task<IActionResult> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
         {
-            await _spareParts.CreatePurchaseOrder(requestDto);
+            var retval = await _spareParts.CreatePurchaseOrder(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
 
         [HttpGet]
-        public async Task GetPurchaseOrderById(Guid id)
+        public async Task<IActionResult> GetPurchaseOrderById(Guid id)
         {
-            await _spareParts.GetNotificationsById(id);
-
+            return Ok(await _spareParts.GetPurchaseOrderById(id));
         }
-
         [HttpPut]
-        public async Task UpdateNotification(UpdateNotificationRequestDto requestDto)
+        public async Task<IActionResult> UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
         {
-            await _spareParts.UpdateNotification(requestDto);
+            var retval = await _spareParts.UpdatePurchaseOrder(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
 
     }

@@ -58,6 +58,10 @@ namespace Data.Migrations
                     b.Property<int>("CarBrandId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<byte[]>("Data")
                         .HasColumnType("varbinary(max)");
 
@@ -82,6 +86,10 @@ namespace Data.Migrations
                     b.Property<int>("ItemTypeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Origin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -89,6 +97,9 @@ namespace Data.Migrations
                     b.Property<string>("SearchText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Year")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -166,9 +177,6 @@ namespace Data.Migrations
                     b.Property<string>("CargoNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CargoStatus")
-                        .HasColumnType("int");
-
                     b.Property<int>("CargoStatusId")
                         .HasColumnType("int");
 
@@ -199,7 +207,7 @@ namespace Data.Migrations
 
                     b.HasIndex("SupplierItemId");
 
-                    b.ToTable("PurchaseOrderDetail");
+                    b.ToTable("PurchaseOrderDetails");
                 });
 
             modelBuilder.Entity("Domain.Supplier", b =>
@@ -316,7 +324,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.PurchaseOrderDetail", b =>
                 {
                     b.HasOne("Domain.PurchaseOrder", "PurchaseOrder")
-                        .WithMany()
+                        .WithMany("PurchaseOrderDetail")
                         .HasForeignKey("PurchaseOrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -335,7 +343,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.SupplierItem", b =>
                 {
                     b.HasOne("Domain.Item", "Item")
-                        .WithMany()
+                        .WithMany("SupplierItems")
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -349,6 +357,16 @@ namespace Data.Migrations
                     b.Navigation("Item");
 
                     b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Domain.Item", b =>
+                {
+                    b.Navigation("SupplierItems");
+                });
+
+            modelBuilder.Entity("Domain.PurchaseOrder", b =>
+                {
+                    b.Navigation("PurchaseOrderDetail");
                 });
 #pragma warning restore 612, 618
         }

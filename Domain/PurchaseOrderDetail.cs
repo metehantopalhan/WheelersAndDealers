@@ -18,8 +18,7 @@ namespace Domain
         public CargoStatus CargoStatus { get; private set; }
         public int CargoStatusId
         {
-            get { return (int)this.CargoStatusId; }
-            set { CargoStatus = (CargoStatus)value; }
+            get; private set;
         }
         public string? DestinationBranch { get; private set; }
         public string? CargoNumber { get; private set; }
@@ -27,18 +26,18 @@ namespace Domain
         public PurchaseOrderDetailStatus PurchaseOrderDetailStatus { get; private set; }
         public int PurchaseOrderDetailStatusId
         {
-            get { return (int)this.PurchaseOrderDetailStatusId; }
-            set { PurchaseOrderDetailStatus = (PurchaseOrderDetailStatus)value; }
+            get; private set;
         }
-        internal PurchaseOrderDetail(Guid purchaseOrderId,Guid itemId, Guid supplierItemId, int quantity, double purchaseOrderDetailPrice)
+        internal PurchaseOrderDetail(Guid purchaseOrderId, Guid itemId, Guid supplierItemId, int quantity, double purchaseOrderDetailPrice)
         {
             Id = Guid.NewGuid();
-            ItemId=itemId;
+            PurchaseOrderId = purchaseOrderId;
+            ItemId = itemId;
             SupplierItemId = supplierItemId;
             Quantity = quantity;
+            PurchaseOrderDetailStatusId = (int)PurchaseOrderDetailStatus.Pending;
             CargoStatusId = (int)CargoStatus.OrderTaken;
             PurchaseOrderDetailPrice = purchaseOrderDetailPrice;
-            PurchaseOrderDetailStatusId = (int)PurchaseOrderDetailStatus.Pending;
 
         }
         public void UpdatePurchaseOrderDetail(int cargoStatusId, string destinationBranch, string cargoNumber, int purchaseOrderDetailStatusId)

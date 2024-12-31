@@ -29,18 +29,21 @@ namespace Domain
             set { ItemType = (ItemType)value; }
         }
         public string ItemDescription { get; private set; }
+        public string Category { get; private set; }
+        public string Origin { get; private set; }
+        public DateTime Year { get; private set; }
         public string ProductCode { get; private set; }
         public string GuaranteeTime { get; private set; }
         public string? ImageName { get; private set; }
         public byte[]? Data { get; private set; }
         public string SearchText { get; private set; }
-        public List<SupplierItem> SupplierItems = new List<SupplierItem>();
+        public List<SupplierItem> SupplierItems { get; set; } = new List<SupplierItem>();
         public void UpdateImage(string? imageName, byte[]? data)
         {
             ImageName = ItemName;
             Data = data;
         }
-        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime)
+        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime, string category, string origin, DateTime year)
         {
             Id = Guid.NewGuid();
             ItemName = itemName;
@@ -51,19 +54,27 @@ namespace Domain
             IsActive = true;
             GuaranteeTime = guaranteeTime;
             SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper();
+            Category = category;
+            Origin = origin;
+            Year = year;
         }
-        public void UpdateItem(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime, bool isActive)
+        public void UpdateItem(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime, bool isActive, string category, string origin, DateTime year)
         {
             ItemName = itemName;
             ItemDescription = itemDescription;
             ItemTypeId = itemType;
             ProductCode = productCode;
             IsActive = isActive;
+            Category = category;
+            Origin = origin;
+            Year = year;
         }
 
-        public void AddSupplierItem(Guid supplierId, double price, string supplierName)
+        public SupplierItem AddSupplierItem(Guid supplierId, double price, string supplierName)
         {
-            SupplierItems.Add(new SupplierItem(Id, supplierId, price, supplierName, ItemName));
+            var supplier = new SupplierItem(Id, supplierId, price, supplierName, ItemName);
+            SupplierItems.Add(supplier);
+            return supplier;
         }
     }
 }

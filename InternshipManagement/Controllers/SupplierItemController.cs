@@ -16,19 +16,31 @@ namespace SpareParts.Controllers
             _spareParts = spareParts;
         }
         [HttpPost]
-        public async Task CreateSupplierItem(CreateSupplierItemRelationRequestDto requestDto)
+        public async Task<IActionResult> CreateSupplierItem(CreateSupplierItemRelationRequestDto requestDto)
         {
-            await _spareParts.CreateItemSupplierRelation(requestDto);
+            var retval = await _spareParts.CreateItemSupplierRelation(requestDto);
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
         }
         [HttpPut]
-        public async Task UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
+        public async Task<IActionResult> UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
         {
-            await _spareParts.UpdateSupplierItem(requestDto);
+            var retval = await _spareParts.UpdateSupplierItem(requestDto);
+
+            if (retval.Item2)
+            {
+                return Ok(retval.Item1);
+            }
+            return UnprocessableEntity(retval.Item1);
+
         }
         [HttpGet]
-        public async Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSuppliersWithItemId(Guid itemId)
+        public async Task<IActionResult> GetItemSuppliersWithItemId(Guid itemId)
         {
-            return await _spareParts.GetItemSupplierByItemId(itemId);
+            return Ok(await _spareParts.GetItemSupplierByItemId(itemId));
         }
     }
 }

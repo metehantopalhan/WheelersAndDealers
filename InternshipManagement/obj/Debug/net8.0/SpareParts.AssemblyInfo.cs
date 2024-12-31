@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpareParts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17a48b93a1e9c679f96eddd1480c1232a601a985")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f5d157bf1be3f12289abfc7fd8bffe6082732da")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpareParts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpareParts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

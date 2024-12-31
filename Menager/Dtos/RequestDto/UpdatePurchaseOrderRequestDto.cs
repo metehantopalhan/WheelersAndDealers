@@ -3,6 +3,6 @@
     public class UpdatePurchaseOrderRequestDto
     {
         public Guid Id { get; set; }
-        public List<UpdatePurchaseOrderDetailRequestDto> UpdatePurchaseOrderList = new();
+        public List<UpdatePurchaseOrderDetailRequestDto> UpdatePurchaseOrderList { get; set; } = new();
     }
 }

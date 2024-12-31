@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o6KjvkI7HoQ=",
+  "dgSpecHash": "/nKhyM/HYbg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gorke\\Source\\Repos\\gorkemtakak\\WheelersAndDealers\\InternshipManagement\\SpareParts.csproj",
+  "projectFilePath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\InternshipManagement\\SpareParts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gorke\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gorke\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

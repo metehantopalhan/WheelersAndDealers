@@ -29,7 +29,7 @@ namespace Data
             return await _dbContext.Items.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take)
+        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
         {
             var predicate = PredicateBuilder.New<Item>(true);
 
@@ -44,6 +44,14 @@ namespace Data
             else
             {
                 predicate.And(x => x.IsActive == true);
+            }
+            if (itemType is not null)
+            {
+                predicate.And(x => x.ItemTypeId == itemType);
+            }
+            if (brandId is not null)
+            {
+                predicate.And(x => x.CarBrandId == brandId);
             }
             return await _dbContext.Items.Where(predicate).Skip(skip).Take(take).OrderBy(x => x.ItemName).ToListAsync();
 
@@ -131,7 +139,7 @@ namespace Data
 
         public async Task CreateItem(Item item)
         {
-            await _dbContext.AddAsync(item);
+            await _dbContext.Items.AddAsync(item);
         }
 
         public async Task CreateSupplier(Supplier supplier)
@@ -147,6 +155,10 @@ namespace Data
         public async Task CreatePurchaseOrder(PurchaseOrder purchaseOrder)
         {
             await _dbContext.PurchaseOrders.AddAsync(purchaseOrder);
+        }
+        public async Task CreatePurchaseOrderDetail(PurchaseOrderDetail purchaseOrderdetail)
+        {
+            await _dbContext.PurchaseOrderDetails.AddAsync(purchaseOrderdetail);
         }
 
         public async Task CreateUser(User user)

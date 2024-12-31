@@ -28,9 +28,10 @@ namespace Data
         Task UploadImageForItem(Guid id, string imageName, byte[] data);
         Task DeleteImageForItem(Guid id);
         Task CreateUser(User user);
-        Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take);
+        Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId);
         Task<Guid?> GetAdminByMailAndPassword(string email, string password);
         Task<Guid?> GetUserByMailAndPassword(string email, string password);
         Task<Guid?> GetSupplierByMailAndPassword(string email, string password);
+        Task CreatePurchaseOrderDetail(PurchaseOrderDetail purchaseOrderdetail);
     }
 }
