@@ -53,7 +53,7 @@ namespace Domain
             CarBrandId = CarBrandId;
             IsActive = true;
             GuaranteeTime = guaranteeTime;
-            SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper();
+            SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper() + itemType.ToString().ToUpper();
             Category = category;
             Origin = origin;
             Year = year;
