@@ -17,7 +17,8 @@ namespace Domain
         public string Surname { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
-        public List<PurchaseOrder> PurchaseOrders = new List<PurchaseOrder>();
+        public List<Item> Items = new List<Item>();
+        //public List<PurchaseOrder> PurchaseOrders = new List<PurchaseOrder>();
         public User(string name, string surname, string email, string password)
         {
             Id = Guid.NewGuid();
@@ -26,10 +27,16 @@ namespace Domain
             Email = email;
             Password = password;
         }
-        public PurchaseOrder AddPurchaseOrder(PurchaseOrder purchaseOrder)
+        //public PurchaseOrder AddPurchaseOrder(PurchaseOrder purchaseOrder)
+        //{
+        //    PurchaseOrders.Add(purchaseOrder);
+        //    return purchaseOrder;
+        //}
+
+        public Item AddItem(Item item)
         {
-            PurchaseOrders.Add(purchaseOrder);
-            return purchaseOrder;
+            Items.Add(item);
+            return item;
         }
         public void UpdateUser(string name, string surname, string email, string password)
         {

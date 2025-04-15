@@ -55,19 +55,11 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("CarBrandId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Data")
                         .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("GuaranteeTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
@@ -75,9 +67,15 @@ namespace Data.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ItemBrandId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ItemDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ItemModelId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ItemName")
                         .IsRequired()
@@ -86,20 +84,15 @@ namespace Data.Migrations
                     b.Property<int>("ItemTypeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Origin")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("SearchText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Year")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("SellerUserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -343,7 +336,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.SupplierItem", b =>
                 {
                     b.HasOne("Domain.Item", "Item")
-                        .WithMany("SupplierItems")
+                        .WithMany()
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -357,11 +350,6 @@ namespace Data.Migrations
                     b.Navigation("Item");
 
                     b.Navigation("Supplier");
-                });
-
-            modelBuilder.Entity("Domain.Item", b =>
-                {
-                    b.Navigation("SupplierItems");
                 });
 
             modelBuilder.Entity("Domain.PurchaseOrder", b =>

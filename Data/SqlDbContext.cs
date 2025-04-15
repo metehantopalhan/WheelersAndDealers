@@ -29,6 +29,7 @@ namespace Data.DbContextLib
             modelBuilder.Entity<PurchaseOrderDetail>().Ignore(c => c.PurchaseOrderDetailStatus);
             modelBuilder.Entity<PurchaseOrderDetail>().Ignore(c => c.CargoStatus);
             modelBuilder.Entity<Item>().Ignore(c => c.ItemType);
+            modelBuilder.Entity<Item>().Ignore(c => c.ItemModel);
             modelBuilder.Entity<Item>().Ignore(c => c.CarBrand);
 
         }

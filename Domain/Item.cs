@@ -14,67 +14,75 @@ namespace Domain
 
         }
         public Guid Id { get; private set; }
+        public Guid SellerUserId { get; private set; }
         public string ItemName { get; private set; }
-        public ItemType ItemType { get; private set; }
-        public CarBrand CarBrand { get; private set; }
-        public int CarBrandId
+        public double Price { get; private set; }
+        public ItemBrand CarBrand { get; private set; }
+        public int ItemBrandId
         {
-            get { return (int)this.ItemType; }
-            set { CarBrand = (CarBrand)value; }
+            get { return (int)this.CarBrand; }
+            set { CarBrand = (ItemBrand)value; }
         }
-        public bool IsActive { get; private set; }
+
+        public ItemType ItemType { get; private set; }
         public int ItemTypeId
         {
             get { return (int)this.ItemType; }
             set { ItemType = (ItemType)value; }
         }
+        public bool IsActive { get; private set; }
         public string ItemDescription { get; private set; }
-        public string Category { get; private set; }
-        public string Origin { get; private set; }
-        public DateTime Year { get; private set; }
-        public string ProductCode { get; private set; }
-        public string GuaranteeTime { get; private set; }
+        public DateTime CreateDate { get; private set; }
         public string? ImageName { get; private set; }
         public byte[]? Data { get; private set; }
         public string SearchText { get; private set; }
-        public List<SupplierItem> SupplierItems { get; set; } = new List<SupplierItem>();
+        public Model ItemModel { get; private set; }
+        public int ItemModelId
+        {
+            get { return (int)this.ItemModelId; }
+            set { ItemModel = (Model)value; }
+        }
+        //public List<SupplierItem> SupplierItems { get; set; } = new List<SupplierItem>();
         public void UpdateImage(string? imageName, byte[]? data)
         {
             ImageName = ItemName;
             Data = data;
         }
-        public Item(string itemName, string itemDescription, int itemType, int carBrandId, string productCode, string guaranteeTime, string category, string origin, DateTime year)
+        public Item(Guid sellerUserId, string itemName, string itemDescription, int itemBrandId, int itemModelId, int itemType, int price)
         {
             Id = Guid.NewGuid();
+            SellerUserId = sellerUserId;
             ItemName = itemName;
             ItemDescription = itemDescription;
+            ItemBrandId = itemBrandId;
+            ItemModelId = itemModelId;
             ItemTypeId = itemType;
-            ProductCode = productCode;
-            CarBrandId = CarBrandId;
             IsActive = true;
-            GuaranteeTime = guaranteeTime;
-            SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ProductCode.ToUpper() + itemType.ToString().ToUpper();
-            Category = category;
-            Origin = origin;
-            Year = year;
+            Price = price;
+            SearchText = ItemName.ToUpper() + ItemDescription.ToUpper() + ItemModel.ToString().ToUpper() + itemBrandId.ToString().ToUpper();
+            CreateDate = DateTime.Now;
         }
-        public void UpdateItem(string itemName, string itemDescription, int itemType, string productCode, string guaranteeTime, bool isActive, string category, string origin, DateTime year)
+        public void UpdateItem(string itemName, string itemDescription, int itemBrand, int itemModelId, int itemTypeId, bool isActive, int price)
         {
             ItemName = itemName;
             ItemDescription = itemDescription;
-            ItemTypeId = itemType;
-            ProductCode = productCode;
+            ItemTypeId |= itemTypeId;
+            ItemBrandId = itemBrand;
+            ItemModelId = itemModelId;
             IsActive = isActive;
-            Category = category;
-            Origin = origin;
-            Year = year;
+            Price = price;
         }
 
-        public SupplierItem AddSupplierItem(Guid supplierId, double price, string supplierName)
+        public void UpdateStatus(bool isActive)
         {
-            var supplier = new SupplierItem(Id, supplierId, price, supplierName, ItemName);
-            SupplierItems.Add(supplier);
-            return supplier;
+            IsActive = isActive;
         }
+
+        //public SupplierItem AddSupplierItem(Guid supplierId, double price, string supplierName)
+        //{
+        //    var supplier = new SupplierItem(Id, supplierId, price, supplierName, ItemName);
+        //    SupplierItems.Add(supplier);
+        //    return supplier;
+        //}
     }
 }

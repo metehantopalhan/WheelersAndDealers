@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using Common;
 using Data;
 using Domain;
 using Menager.Dtos.RequestDto;
 using Menager.Dtos.ResponseDto;
-using System.Runtime.InteropServices;
 
 namespace Menager
 {
@@ -19,14 +17,10 @@ namespace Menager
         }
         public async Task<(string, bool)> CreateItem(CreateItemRequestDto requestDto)
         {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
-            if (admin == null)
-            {
-                return ("You are not allowed to do this action", false);
-            }
-
-            Item item = new Item(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemTypeId, requestDto.CarBrandId, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.Category, requestDto.Origin, requestDto.Year);
+            Item item = new Item(requestDto.UserId, requestDto.ItemName, requestDto.Description, requestDto.ItemBrandId, requestDto.ItemModelId, requestDto.ItemTypeId, requestDto.Price);
             await _sparePartsData.CreateItem(item);
+            var user = await _sparePartsData.getUserById(requestDto.UserId);
+            user.AddItem(item);
             await _sparePartsData.PersistAsync();
             return ("", true);
         }
@@ -38,41 +32,41 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
-        public async Task<(string, bool)> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
-        {
-            var user = await _sparePartsData.getUserById(requestDto.UserId);
-            if (user == null)
-            {
-                return ("You are not allowed to do this action", false);
-            }
+        //public async Task<(string, bool)> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
+        //{
+        //    var user = await _sparePartsData.getUserById(requestDto.UserId);
+        //    if (user == null)
+        //    {
+        //        return ("You are not allowed to do this action", false);
+        //    }
 
-            PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
-            user.AddPurchaseOrder(purchaseOrder);
-            await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
-            await _sparePartsData.PersistAsync();
+        //    PurchaseOrder purchaseOrder = new PurchaseOrder(requestDto.UserId, requestDto.PurchaseOrderPrice, requestDto.TitleOfDestinationAddress, requestDto.TitleOfBill, requestDto.DestinationAddressDescription, requestDto.BillDescription);
+        //    user.AddPurchaseOrder(purchaseOrder);
+        //    await _sparePartsData.CreatePurchaseOrder(purchaseOrder);
+        //    await _sparePartsData.PersistAsync();
 
-            foreach (var purchaseOrderDetail in requestDto.PurchaseOrderDetailList)
-            {
-                var detail = purchaseOrder.AddPurchaseOrderDetail(purchaseOrder.Id, purchaseOrderDetail.SupplierItemId, purchaseOrderDetail.ItemId, purchaseOrderDetail.Quantity, purchaseOrderDetail.PurchaseOrderDetailPrice);
-                await _sparePartsData.CreatePurchaseOrderDetail(detail);
-            }
-            await _sparePartsData.PersistAsync();
-            return ("", true);
-        }
+        //    foreach (var purchaseOrderDetail in requestDto.PurchaseOrderDetailList)
+        //    {
+        //        var detail = purchaseOrder.AddPurchaseOrderDetail(purchaseOrder.Id, purchaseOrderDetail.SupplierItemId, purchaseOrderDetail.ItemId, purchaseOrderDetail.Quantity, purchaseOrderDetail.PurchaseOrderDetailPrice);
+        //        await _sparePartsData.CreatePurchaseOrderDetail(detail);
+        //    }
+        //    await _sparePartsData.PersistAsync();
+        //    return ("", true);
+        //}
 
-        public async Task<(string, bool)> CreateSupplier(CreateSupplierRequestDto requestDto)
-        {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
-            if (admin == null)
-            {
-                return ("You are not allowed to do this action", false);
-            }
+        //public async Task<(string, bool)> CreateSupplier(CreateSupplierRequestDto requestDto)
+        //{
+        //    var admin = await _sparePartsData.getAdminById(requestDto.UserId);
+        //    if (admin == null)
+        //    {
+        //        return ("You are not allowed to do this action", false);
+        //    }
 
-            var supplier = new Supplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Email, requestDto.Password, requestDto.Phone, requestDto.SupplierLocation);
-            await _sparePartsData.CreateSupplier(supplier);
-            await _sparePartsData.PersistAsync();
-            return ("", true);
-        }
+        //    var supplier = new Supplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Email, requestDto.Password, requestDto.Phone, requestDto.SupplierLocation);
+        //    await _sparePartsData.CreateSupplier(supplier);
+        //    await _sparePartsData.PersistAsync();
+        //    return ("", true);
+        //}
 
         public async Task CreateUser(CreateUserRequestDto requestDto)
         {
@@ -87,9 +81,15 @@ namespace Menager
             return _mapper.Map<GetItemByIdResponseDto>(item);
         }
 
-        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
+        public async Task<List<GetItemByIdResponseDto>> GetItemListByUserId(Guid id)
         {
-            var itemList = await _sparePartsData.getItemByParameters(searchText, isActive, skip, take, itemType, brandId);
+            var item = await _sparePartsData.getItemsByUserId(id);
+            return _mapper.Map<List<GetItemByIdResponseDto>>(item);
+        }
+
+        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int itemModelId, int? brandId)
+        {
+            var itemList = await _sparePartsData.getItemByParameters(searchText, isActive, skip, take, itemType, itemModelId, brandId);
             return _mapper.Map<List<GetItemByParametersResponseDto>>(itemList);
         }
 
@@ -132,25 +132,25 @@ namespace Menager
                 return ("You are not allowed to do this action", false);
             }
             Item item = await _sparePartsData.getItemById(requestDto.ItemId);
-            item.UpdateItem(requestDto.ItemName, requestDto.ItemDescription, requestDto.ItemType, requestDto.ProductCode, requestDto.GuaranteeTime, requestDto.IsActive, requestDto.Category, requestDto.Origin, requestDto.Year);
+            item.UpdateItem(requestDto.ItemName, requestDto.Description, requestDto.ItemBrandId, requestDto.ItemModelId, requestDto.ItemTypeId, requestDto.IsActive, requestDto.Price);
             await _sparePartsData.PersistAsync();
             return ("", true);
         }
 
-        public async Task<(string, bool)> CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto)
-        {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
-            if (admin == null)
-            {
-                return ("You are not allowed to do this action", false);
-            }
-            Item item = await _sparePartsData.getItemById(requestDto.ItemId);
-            var supplierItem = item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
-            await _sparePartsData.CreateSupplierItem(supplierItem);
-            await _sparePartsData.PersistAsync();
-            return ("", true);
+        //public async Task<(string, bool)> CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto)
+        //{
+        //    var admin = await _sparePartsData.getAdminById(requestDto.UserId);
+        //    if (admin == null)
+        //    {
+        //        return ("You are not allowed to do this action", false);
+        //    }
+        //    Item item = await _sparePartsData.getItemById(requestDto.ItemId);
+        //    var supplierItem = item.AddSupplierItem(requestDto.SupplierId, requestDto.Price, requestDto.SupplierName);
+        //    await _sparePartsData.CreateSupplierItem(supplierItem);
+        //    await _sparePartsData.PersistAsync();
+        //    return ("", true);
 
-        }
+        //}
 
         public async Task UpdateNotification(UpdateNotificationRequestDto requestDto)
         {
@@ -179,41 +179,41 @@ namespace Menager
             return ("", true);
         }
 
-        public async Task<(string, bool)> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
-        {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
-            if (admin == null)
-            {
-                return ("You are not allowed to do this action", false);
-            }
-            var supplier = await _sparePartsData.getSupplierById(requestDto.Id);
-            if (supplier == null)
-            {
-                return ("Supplier could not be found", false);
-            }
+        //public async Task<(string, bool)> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
+        //{
+        //    var admin = await _sparePartsData.getAdminById(requestDto.UserId);
+        //    if (admin == null)
+        //    {
+        //        return ("You are not allowed to do this action", false);
+        //    }
+        //    var supplier = await _sparePartsData.getSupplierById(requestDto.Id);
+        //    if (supplier == null)
+        //    {
+        //        return ("Supplier could not be found", false);
+        //    }
 
-            supplier.UpdateSupplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Phone, requestDto.SupplierLocation);
-            await _sparePartsData.PersistAsync();
-            return ("", true);
-        }
+        //    supplier.UpdateSupplier(requestDto.SupplierName, requestDto.SupplierDescription, requestDto.Phone, requestDto.SupplierLocation);
+        //    await _sparePartsData.PersistAsync();
+        //    return ("", true);
+        //}
 
-        public async Task<(string, bool)> UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
-        {
-            var admin = await _sparePartsData.getAdminById(requestDto.UserId);
-            if (admin == null)
-            {
-                throw new Exception("You are not allowed to do this action");
-            }
-            var supplierItem = await _sparePartsData.getSupplierItemById(requestDto.Id);
-            if (supplierItem == null)
-            {
-                return ("Supplier could not be found", false);
-            }
+        //public async Task<(string, bool)> UpdateSupplierItem(UpdateSupplierItemRequestDto requestDto)
+        //{
+        //    var admin = await _sparePartsData.getAdminById(requestDto.UserId);
+        //    if (admin == null)
+        //    {
+        //        throw new Exception("You are not allowed to do this action");
+        //    }
+        //    var supplierItem = await _sparePartsData.getSupplierItemById(requestDto.Id);
+        //    if (supplierItem == null)
+        //    {
+        //        return ("Supplier could not be found", false);
+        //    }
 
-            supplierItem.UpdateSupplierItem(requestDto.IsActive, requestDto.Price, requestDto.SupplierName, requestDto.ItemName);
-            await _sparePartsData.PersistAsync();
-            return ("", true);
-        }
+        //    supplierItem.UpdateSupplierItem(requestDto.IsActive, requestDto.Price, requestDto.SupplierName, requestDto.ItemName);
+        //    await _sparePartsData.PersistAsync();
+        //    return ("", true);
+        //}
 
         public async Task UpdateUser(UpdateUserRequestDto requestDto)
         {
@@ -247,10 +247,10 @@ namespace Menager
             await _sparePartsData.PersistAsync();
         }
 
-        public async Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSupplierByItemId(Guid id)
-        {
-            List<SupplierItem> itemSupplier = await _sparePartsData.getSupplierItemByItemId(id);
-            return _mapper.Map<List<GetItemSuppliersWithItemIdResponseDto>>(itemSupplier);
-        }
+        //public async Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSupplierByItemId(Guid id)
+        //{
+        //    List<SupplierItem> itemSupplier = await _sparePartsData.getSupplierItemByItemId(id);
+        //    return _mapper.Map<List<GetItemSuppliersWithItemIdResponseDto>>(itemSupplier);
+        //}
     }
 }

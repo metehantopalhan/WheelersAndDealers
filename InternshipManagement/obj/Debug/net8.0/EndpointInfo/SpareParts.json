@@ -108,6 +108,14 @@
             }
           },
           {
+            "name": "itemModelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "name": "brandId",
             "in": "query",
             "schema": {
@@ -226,35 +234,6 @@
       }
     },
     "/api/purchaseOrder": {
-      "post": {
-        "tags": [
-          "PurchaseOrder"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseOrderRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseOrderRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePurchaseOrderRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "get": {
         "tags": [
           "PurchaseOrder"
@@ -262,201 +241,6 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "PurchaseOrder"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseOrderRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseOrderRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdatePurchaseOrderRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/suppliers": {
-      "put": {
-        "tags": [
-          "Supplier"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSuppplierRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSuppplierRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSuppplierRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Supplier"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Supplier"
-        ],
-        "parameters": [
-          {
-            "name": "email",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "password",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/supplierItems": {
-      "post": {
-        "tags": [
-          "SupplierItem"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierItemRelationRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierItemRelationRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSupplierItemRelationRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "SupplierItem"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSupplierItemRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSupplierItemRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSupplierItemRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "SupplierItem"
-        ],
-        "parameters": [
-          {
-            "name": "itemId",
             "in": "query",
             "schema": {
               "type": "string",
@@ -571,25 +355,25 @@
             "type": "string",
             "nullable": true
           },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
           "itemTypeId": {
             "type": "integer",
             "format": "int32"
           },
-          "carBrandId": {
+          "itemBrandId": {
             "type": "integer",
             "format": "int32"
           },
-          "itemDescription": {
-            "type": "string",
-            "nullable": true
+          "price": {
+            "type": "integer",
+            "format": "int32"
           },
-          "productCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "guaranteeTime": {
-            "type": "string",
-            "nullable": true
+          "itemModelId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -612,129 +396,6 @@
           "relatedUserTypeId": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreatePurchaseOrderDetailsRequestDto": {
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "itemId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "purchaseOrderDetailPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "supplierItemId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreatePurchaseOrderRequestDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "purchaseOrderPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "titleOfDestinationAddress": {
-            "type": "string",
-            "nullable": true
-          },
-          "titleOfBill": {
-            "type": "string",
-            "nullable": true
-          },
-          "destinationAddressDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "billDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "purchaseOrderDetailList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CreatePurchaseOrderDetailsRequestDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateSupplierItemRelationRequestDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "itemId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "supplierId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "supplierName": {
-            "type": "string",
-            "nullable": true
-          },
-          "itemName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateSupplierRequestDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "supplierName": {
-            "type": "string",
-            "nullable": true
-          },
-          "supplierDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "phone": {
-            "type": "string",
-            "nullable": true
-          },
-          "supplierLocation": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -776,24 +437,28 @@
             "type": "string",
             "nullable": true
           },
-          "itemType": {
+          "itemTypeId": {
             "type": "integer",
             "format": "int32"
           },
-          "itemDescription": {
-            "type": "string",
-            "nullable": true
+          "itemBrandId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "productCode": {
-            "type": "string",
-            "nullable": true
+          "itemModelId": {
+            "type": "integer",
+            "format": "int32"
           },
-          "guaranteeTime": {
+          "description": {
             "type": "string",
             "nullable": true
           },
           "isActive": {
             "type": "boolean"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -811,124 +476,6 @@
           },
           "hasRead": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdatePurchaseOrderDetailRequestDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "cargoStatusId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "destinationBranch": {
-            "type": "string",
-            "nullable": true
-          },
-          "cargoNumber": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "purchaseOrderStatusId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdatePurchaseOrderRequestDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "updatePurchaseOrderList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UpdatePurchaseOrderDetailRequestDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateSupplierItemRequestDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "supplierName": {
-            "type": "string",
-            "nullable": true
-          },
-          "itemName": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateSuppplierRequestDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "supplierName": {
-            "type": "string",
-            "nullable": true
-          },
-          "supplierDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "phone": {
-            "type": "string",
-            "nullable": true
-          },
-          "supplierLocation": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

@@ -65,6 +65,11 @@
         "IsRequired": false
       },
       {
+        "Name": "itemModelId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
         "Name": "brandId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
@@ -138,22 +143,6 @@
   },
   {
     "ContainingType": "SpareParts.Controllers.PurchaseOrderController",
-    "Method": "CreatePurchaseOrder",
-    "RelativePath": "api/purchaseOrder",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.CreatePurchaseOrderRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.PurchaseOrderController",
     "Method": "GetPurchaseOrderById",
     "RelativePath": "api/purchaseOrder",
     "HttpMethod": "GET",
@@ -163,123 +152,6 @@
       {
         "Name": "id",
         "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.PurchaseOrderController",
-    "Method": "UpdatePurchaseOrder",
-    "RelativePath": "api/purchaseOrder",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.UpdatePurchaseOrderRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierItemController",
-    "Method": "CreateSupplierItem",
-    "RelativePath": "api/supplierItems",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.CreateSupplierItemRelationRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierItemController",
-    "Method": "UpdateSupplierItem",
-    "RelativePath": "api/supplierItems",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.UpdateSupplierItemRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierItemController",
-    "Method": "GetItemSuppliersWithItemId",
-    "RelativePath": "api/supplierItems",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "itemId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierController",
-    "Method": "UpdateSupplier",
-    "RelativePath": "api/suppliers",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.UpdateSuppplierRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierController",
-    "Method": "CreateSupplier",
-    "RelativePath": "api/suppliers",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestDto",
-        "Type": "Menager.Dtos.RequestDto.CreateSupplierRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SpareParts.Controllers.SupplierController",
-    "Method": "LoginForSupplier",
-    "RelativePath": "api/suppliers",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
         "IsRequired": false
       }
     ],

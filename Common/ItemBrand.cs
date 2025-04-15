@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common
+﻿namespace Common
 {
-    public enum CarBrand
+    public enum ItemBrand
     {
         Opel=1,
         Mercedes=2,

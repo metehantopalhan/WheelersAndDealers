@@ -31,19 +31,18 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SellerUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ItemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CarBrandId = table.Column<int>(type: "int", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    ItemBrandId = table.Column<int>(type: "int", nullable: false),
                     ItemTypeId = table.Column<int>(type: "int", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
                     ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Year = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GuaranteeTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ImageName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Data = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    SearchText = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SearchText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ItemModelId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

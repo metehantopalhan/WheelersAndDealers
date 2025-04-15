@@ -18,32 +18,32 @@ namespace SpareParts.Controllers
             _spareParts = spareParts;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
-        {
-            var retval = await _spareParts.CreatePurchaseOrder(requestDto);
-            if (retval.Item2)
-            {
-                return Ok(retval.Item1);
-            }
-            return UnprocessableEntity(retval.Item1);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto)
+        //{
+        //    var retval = await _spareParts.CreatePurchaseOrder(requestDto);
+        //    if (retval.Item2)
+        //    {
+        //        return Ok(retval.Item1);
+        //    }
+        //    return UnprocessableEntity(retval.Item1);
+        //}
 
         [HttpGet]
         public async Task<IActionResult> GetPurchaseOrderById(Guid id)
         {
             return Ok(await _spareParts.GetPurchaseOrderById(id));
         }
-        [HttpPut]
-        public async Task<IActionResult> UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
-        {
-            var retval = await _spareParts.UpdatePurchaseOrder(requestDto);
-            if (retval.Item2)
-            {
-                return Ok(retval.Item1);
-            }
-            return UnprocessableEntity(retval.Item1);
-        }
+        //[HttpPut]
+        //public async Task<IActionResult> UpdatePurchaseOrder(UpdatePurchaseOrderRequestDto requestDto)
+        //{
+        //    var retval = await _spareParts.UpdatePurchaseOrder(requestDto);
+        //    if (retval.Item2)
+        //    {
+        //        return Ok(retval.Item1);
+        //    }
+        //    return UnprocessableEntity(retval.Item1);
+        //}
 
     }
 }

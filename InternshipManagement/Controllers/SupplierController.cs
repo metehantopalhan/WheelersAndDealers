@@ -15,31 +15,31 @@ namespace SpareParts.Controllers
             _spareParts = spareParts;
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
-        {
-            var retval = await _spareParts.UpdateSupplier(requestDto);
-            if (retval.Item2)
-            {
-                return Ok(retval.Item1);
-            }
-            return UnprocessableEntity(retval.Item1);
-        }
+        //[HttpPut]
+        //public async Task<IActionResult> UpdateSupplier(UpdateSuppplierRequestDto requestDto)
+        //{
+        //    var retval = await _spareParts.UpdateSupplier(requestDto);
+        //    if (retval.Item2)
+        //    {
+        //        return Ok(retval.Item1);
+        //    }
+        //    return UnprocessableEntity(retval.Item1);
+        //}
 
-        [HttpPost]
-        public async Task<IActionResult> CreateSupplier(CreateSupplierRequestDto requestDto)
-        {
-            var retval = await _spareParts.CreateSupplier(requestDto);
-            if (retval.Item2)
-            {
-                return Ok(retval.Item1);
-            }
-            return UnprocessableEntity(retval.Item1);
-        }
-        [HttpGet]
-        public async Task<IActionResult> LoginForSupplier(string email, string password)
-        {
-            return Ok(await _spareParts.LoginForSupplier(email, password));
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> CreateSupplier(CreateSupplierRequestDto requestDto)
+        //{
+        //    var retval = await _spareParts.CreateSupplier(requestDto);
+        //    if (retval.Item2)
+        //    {
+        //        return Ok(retval.Item1);
+        //    }
+        //    return UnprocessableEntity(retval.Item1);
+        //}
+        //[HttpGet]
+        //public async Task<IActionResult> LoginForSupplier(string email, string password)
+        //{
+        //    return Ok(await _spareParts.LoginForSupplier(email, password));
+        //}
     }
 }

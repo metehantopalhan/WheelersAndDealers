@@ -29,13 +29,33 @@ namespace Data
             return await _dbContext.Items.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
+        public async Task<List<Item>> getItemsByUserId(Guid id)
+        {
+            return await _dbContext.Items.Where(x => x.SellerUserId == id).ToListAsync();
+        }
+
+        public async Task<List<Item>> getItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemTypeId, int? itemModelId, int? brandId)
         {
             var predicate = PredicateBuilder.New<Item>(true);
 
             if (searchText != null)
             {
                 predicate.And(x => x.SearchText.Contains(searchText.ToUpper()));
+            }
+            if (itemModelId.HasValue)
+            {
+                predicate.And(x => x.ItemModelId == itemModelId);
+
+            }
+            if (brandId.HasValue)
+            {
+                predicate.And(x => x.ItemBrandId == brandId);
+
+            }
+            if (itemTypeId.HasValue)
+            {
+                predicate.And(x => x.ItemTypeId == itemTypeId);
+
             }
             if (isActive != null)
             {
@@ -45,14 +65,7 @@ namespace Data
             {
                 predicate.And(x => x.IsActive == true);
             }
-            if (itemType is not null)
-            {
-                predicate.And(x => x.ItemTypeId == itemType);
-            }
-            if (brandId is not null)
-            {
-                predicate.And(x => x.CarBrandId == brandId);
-            }
+
             return await _dbContext.Items.Where(predicate).Skip(skip).Take(take).OrderBy(x => x.ItemName).ToListAsync();
 
         }

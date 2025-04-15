@@ -31,6 +31,13 @@ namespace SpareParts.Controllers
         {
             return Ok(await _spareParts.GetItemById(id));
         }
+
+        [HttpGet("userId")]
+        public async Task<IActionResult> GetItemListByUserId(Guid id)
+        {
+            return Ok(await _spareParts.GetItemListByUserId(id));
+        }
+
         [HttpPut]
         public async Task<IActionResult> UpdateItem(UpdateItemRequestDto requestDto)
         {
@@ -42,9 +49,9 @@ namespace SpareParts.Controllers
             return UnprocessableEntity(retval.Item1);
         }
         [HttpGet]
-        public async Task<IActionResult> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? brandId)
+        public async Task<IActionResult> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int itemModelId, int? brandId)
         {
-            return Ok(await _spareParts.GetItemByParameters(searchText, isActive, skip, take, itemType, brandId));
+            return Ok(await _spareParts.GetItemByParameters(searchText, isActive, skip, take, itemType, itemModelId, brandId));
         }
 
     }

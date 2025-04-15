@@ -4,13 +4,11 @@
     {
         public Guid UserId { get; set; }
         public string ItemName { get; set; }
+        public string Description { get; set; }
         public int ItemTypeId { get; set; }
-        public int CarBrandId { get; set; }
-        public string ItemDescription { get; set; }
-        public string ProductCode { get; set; }
-        public string GuaranteeTime { get; set; }
-        public string Category { get; set; }
-        public string Origin { get; set; }
-        public DateTime Year { get; set; }
+        public int ItemBrandId { get; set; }
+        public int Price { get; set; }
+        public int ItemModelId { get; set; }
+
     }
 }

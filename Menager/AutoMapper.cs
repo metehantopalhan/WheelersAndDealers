@@ -8,8 +8,8 @@ namespace Menager
     {
         public AutoMapper()
         {
-            CreateMap<Item, GetItemByIdResponseDto>()
-            .ForMember(destinationMember => destinationMember.SupplierItemLists, operation => operation.MapFrom(sourceMember => sourceMember.SupplierItems));
+            CreateMap<Item, GetItemByIdResponseDto>();
+          
             CreateMap<SupplierItem, SupplierItemListResponseDto>();
 
             CreateMap<Item, GetItemByParametersResponseDto>();
