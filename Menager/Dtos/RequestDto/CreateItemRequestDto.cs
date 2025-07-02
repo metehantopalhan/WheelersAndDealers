@@ -9,6 +9,6 @@
         public int ItemBrandId { get; set; }
         public int Price { get; set; }
         public int ItemModelId { get; set; }
-
+        public byte[] Data { get; set; }
     }
 }

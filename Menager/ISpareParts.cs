@@ -1,4 +1,5 @@
-﻿using Menager.Dtos.RequestDto;
+﻿using Domain;
+using Menager.Dtos.RequestDto;
 using Menager.Dtos.ResponseDto;
 
 namespace Menager
@@ -8,10 +9,13 @@ namespace Menager
         Task<Guid?> LoginForAdmin(string mail, string password);
         Task<(string, bool)> CreateItem(CreateItemRequestDto requestDto);
         Task<(string, bool)> UpdateItem(UpdateItemRequestDto requestDto);
-        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int itemModelId, int? brandId);
+        Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? itemModelId, int? brandId);
         Task<GetItemByIdResponseDto> GetItemById(Guid id);
         Task UploadImage(UploadImageRequestDto requestDto);
         Task CreateNotification(CreateNotificationRequestDto requestDto);
+        Task CreateMessage(CreateMessageRequestDto requestDto);
+        Task<List<Message>> GetMessageList(Guid sourceUserId, Guid receiverUserId);
+        Task<List<GetMessageListResponseDto>> GetMessageListForUser(Guid receiverUserId);
         Task UpdateNotification(UpdateNotificationRequestDto requestDto);
         Task<GetNotificationResponseDto> GetNotificationsById(Guid id);
         //Task<(string, bool)> CreatePurchaseOrder(CreatePurchaseOrderRequestDto requestDto);
@@ -28,7 +32,6 @@ namespace Menager
         //Task<Guid?> LoginForSupplier(string mail, string password);
         //Task<(string, bool)> CreateItemSupplierRelation(CreateSupplierItemRelationRequestDto requestDto);
         Task DeleteImage(Guid id);
-        Task<GetItemByIdResponseDto> getItemsByUserId(Guid id);
         Task<List<GetItemByIdResponseDto>> GetItemListByUserId(Guid id);
     }
 }

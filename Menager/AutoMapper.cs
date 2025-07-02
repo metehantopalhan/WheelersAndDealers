@@ -19,6 +19,7 @@ namespace Menager
             CreateMap<PurchaseOrderDetail, PurchaseOrderDetailResponseDto>();
             CreateMap<User, GetUserByParametersResponseDto>();
             CreateMap<SupplierItem, GetItemSuppliersWithItemIdResponseDto>();
+            CreateMap<Message, GetMessageListResponseDto>();
         }
     }
 }

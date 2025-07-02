@@ -20,6 +20,7 @@ namespace Data.DbContextLib
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierItem> SupplierItems { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Message> Message { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Tartarus\\Ders\\spareParts\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\Common.csproj",
+      "projectPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Tartarus\\Ders\\spareParts\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\gorke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Jax Teller\\Ders\\spareParts\\Common\\obj\\",
+      "outputPath": "C:\\Users\\gorke\\OneDrive\\Masaüstü\\Tartarus\\Ders\\spareParts\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

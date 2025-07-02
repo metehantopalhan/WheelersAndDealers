@@ -2,7 +2,6 @@
 using Domain;
 using LinqKit;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 
 namespace Data
 {
@@ -196,6 +195,21 @@ namespace Data
         public async Task<List<SupplierItem>> getSupplierItemByItemId(Guid id)
         {
             return await _dbContext.SupplierItems.Where(x => x.Id == id).ToListAsync();
+        }
+
+        public async Task CreateMessage(Message message)
+        {
+            await _dbContext.Message.AddAsync(message);
+        }
+
+        public Task<List<Message>> GetMessageList(Guid senderUserId, Guid receiverUserId)
+        {
+            return _dbContext.Message.Where(x => (x.SenderUserId == senderUserId && x.ReceiverUserId == receiverUserId) || (x.SenderUserId == receiverUserId && x.ReceiverUserId == senderUserId)).OrderBy(x => x.CreateDate).ToListAsync();
+        }
+
+        public async Task<List<Message>> GetMessageListForUser(Guid receiverId)
+        {
+            return await _dbContext.Message.Where(x => x.ReceiverUserId == receiverId).OrderByDescending(x=>x.CreateDate).ToListAsync();
         }
     }
 }

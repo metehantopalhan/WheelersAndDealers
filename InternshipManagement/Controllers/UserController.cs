@@ -15,9 +15,9 @@ namespace SpareParts.Controllers
             _spareParts = spareParts;
         }
         [HttpGet]
-        public async Task<IActionResult> LoginForUser(string username, string password)
+        public async Task<IActionResult> LoginForUser(string email, string password)
         {
-            return Ok(await _spareParts.LoginForUser(username, password));
+            return Ok(await _spareParts.LoginForUser(email, password));
         }
         [HttpPost]
         public async Task<IActionResult> CreateUser(CreateUserRequestDto requestDto)
@@ -31,6 +31,8 @@ namespace SpareParts.Controllers
             await _spareParts.UpdateUser(requestDto);
             return Ok();
         }
+
+        
 
     }
 }

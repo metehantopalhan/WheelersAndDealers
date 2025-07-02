@@ -18,6 +18,7 @@ namespace Menager
         public async Task<(string, bool)> CreateItem(CreateItemRequestDto requestDto)
         {
             Item item = new Item(requestDto.UserId, requestDto.ItemName, requestDto.Description, requestDto.ItemBrandId, requestDto.ItemModelId, requestDto.ItemTypeId, requestDto.Price);
+            item.UpdateImage(item.ItemName, requestDto.Data);
             await _sparePartsData.CreateItem(item);
             var user = await _sparePartsData.getUserById(requestDto.UserId);
             user.AddItem(item);
@@ -78,7 +79,12 @@ namespace Menager
         public async Task<GetItemByIdResponseDto> GetItemById(Guid id)
         {
             var item = await _sparePartsData.getItemById(id);
-            return _mapper.Map<GetItemByIdResponseDto>(item);
+            var user = await _sparePartsData.getUserById(item.SellerUserId);
+            var retval = _mapper.Map<GetItemByIdResponseDto>(item);
+            retval.Name = user.Name;
+            retval.Surname = user.Surname;
+            retval.Email = user.Email;
+            return retval;
         }
 
         public async Task<List<GetItemByIdResponseDto>> GetItemListByUserId(Guid id)
@@ -87,7 +93,7 @@ namespace Menager
             return _mapper.Map<List<GetItemByIdResponseDto>>(item);
         }
 
-        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int itemModelId, int? brandId)
+        public async Task<List<GetItemByParametersResponseDto>> GetItemByParameters(string? searchText, bool? isActive, int skip, int take, int? itemType, int? itemModelId, int? brandId)
         {
             var itemList = await _sparePartsData.getItemByParameters(searchText, isActive, skip, take, itemType, itemModelId, brandId);
             return _mapper.Map<List<GetItemByParametersResponseDto>>(itemList);
@@ -246,6 +252,37 @@ namespace Menager
             item.UpdateImage(null, null);
             await _sparePartsData.PersistAsync();
         }
+
+        public async Task CreateMessage(CreateMessageRequestDto requestDto)
+        {
+            var message = new Message(requestDto.SenderUserId, requestDto.ReceiverUserId, requestDto.Description);
+
+            await _sparePartsData.CreateMessage(message);
+            await _sparePartsData.PersistAsync();
+        }
+
+        public async Task<List<Message>> GetMessageList(Guid sourceUserId, Guid receiverUserId)
+        {
+            List<Message> messageList = await _sparePartsData.GetMessageList(sourceUserId, receiverUserId);
+            return messageList;
+        }
+
+        public async Task<List<GetMessageListResponseDto>> GetMessageListForUser(Guid receiverUserId)
+        {
+            var messageList = await _sparePartsData.GetMessageListForUser(receiverUserId);
+            var retval = new List<GetMessageListResponseDto>();
+            foreach (var message in messageList)
+            {
+                var senderUser = await _sparePartsData.getUserById(message.SenderUserId);
+                var user = new GetMessageListResponseDto() { CreateDate = message.CreateDate, Description = message.Description, ReceiverUserId = message.ReceiverUserId, SenderUserId = message.SenderUserId, SenderUserName = senderUser.Name + senderUser.Surname };
+                retval.Add(user);
+
+            }
+
+            return retval.DistinctBy(x => x.SenderUserId).ToList();
+        }
+
+
 
         //public async Task<List<GetItemSuppliersWithItemIdResponseDto>> GetItemSupplierByItemId(Guid id)
         //{

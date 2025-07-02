@@ -18,18 +18,10 @@ namespace Domain
         public string ItemName { get; private set; }
         public double Price { get; private set; }
         public ItemBrand CarBrand { get; private set; }
-        public int ItemBrandId
-        {
-            get { return (int)this.CarBrand; }
-            set { CarBrand = (ItemBrand)value; }
-        }
+        public int ItemBrandId { get; private set; }
 
         public ItemType ItemType { get; private set; }
-        public int ItemTypeId
-        {
-            get { return (int)this.ItemType; }
-            set { ItemType = (ItemType)value; }
-        }
+        public int ItemTypeId { get; private set; }
         public bool IsActive { get; private set; }
         public string ItemDescription { get; private set; }
         public DateTime CreateDate { get; private set; }
@@ -37,11 +29,7 @@ namespace Domain
         public byte[]? Data { get; private set; }
         public string SearchText { get; private set; }
         public Model ItemModel { get; private set; }
-        public int ItemModelId
-        {
-            get { return (int)this.ItemModelId; }
-            set { ItemModel = (Model)value; }
-        }
+        public int ItemModelId { get; private set; }
         //public List<SupplierItem> SupplierItems { get; set; } = new List<SupplierItem>();
         public void UpdateImage(string? imageName, byte[]? data)
         {

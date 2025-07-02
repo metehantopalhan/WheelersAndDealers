@@ -6,6 +6,9 @@ namespace Menager.Dtos.ResponseDto
     {
         public Guid Id { get; private set; }
         public Guid SellerUserId { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
         public string ItemName { get; set; }
         public double Price { get; set; }
         public int ItemBrandId
@@ -26,5 +29,6 @@ namespace Menager.Dtos.ResponseDto
         {
             get; set;
         }
+        public DateTime CreateDate { get; set; }
     }
 }
